@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+      <nav>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="services.html">Services</a></li>
+
+        </nav>
+    <br>
+    <h1>
+        Want to contact us fill in the form below  
+    </h1>
+    <form>
+        <fieldset>
+            <legend> Contact us </legend>
+            <div>
+                <label>
+                    Name
+                </label>
+                <input type="text" id="name" name="name" required><br><br>
+            </div>
+            <div>
+                <label>
+                    Email
+                </label>
+                <input type="text" id="Email" name="Email" required><br><br>
+            </div>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="123-456-7890"><br><br>
+            </div>
+            <div>
+            <label for="feedback">Feedback:</label><br>
+                        <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+                        <input type="submit" value="Submit">
+            </div>
+        </fieldset>
+
+    </form>
+    
+</body>
+<footer>
+   <a href="#top">Back to top </a>
+</footer>
+</html>
