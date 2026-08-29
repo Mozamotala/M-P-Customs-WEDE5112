@@ -28,7 +28,8 @@
 *(To be completed — brief note on the planning process.)*
 
 ### Sitemap
-*(Insert your finished Figma sitemap image or link here.)*
+C:\Users\zzeem\OneDrive\Desktop\web\M&P-Customs>git add .
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
 
 Figma link: https://www.figma.com/design/IAVM6PVkYBK4r712gqPqUC/Untitled?node-id=2-42&t=T79HgJ503JorCNSK-1
 
