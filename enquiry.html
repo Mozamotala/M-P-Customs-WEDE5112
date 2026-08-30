@@ -6,9 +6,10 @@
     <title>Enquiries M&P Customs</title>
     <meta name="author" content="Mohamed Zaeem Motala">
     <meta name="keywords" content="3D-printing,welding,CNC">
-    <meta name="description" content="enquire about M&P customs">
+    <meta name="description" content="Enquire about M&P Customs">
 </head>
 <body>
+    <!-- main header and navbar -->
     <header id="top">
       <br>
       <nav>
@@ -26,6 +27,7 @@
     <h1>
         Want a quote fill this out  
     </h1>
+    <!-- enquiry form so clients can ask for a quote and pick what they need -->
     <form>
         <fieldset>
             <legend> Enquiries </legend>
@@ -45,18 +47,19 @@
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="123-456-7890"><br><br>
             </div>
+            <!-- dropdown list to choose the service -->
             <div>
                 <label for="services">Services needed</label>
                 <select id="services" name="services">
                 <option value="Deselected">Select service </option>
-                <option value="3D printing">3D printing</option>
+                <option value="3D Printing">3D Printing</option>
                 <option value="CNC">CNC</option>
                 <option value="Welding">Welding</option>
             </select>
             </div>
          
             <div>
-            <label for="feedback">Feedback:</label><br>
+            <label for="feedback">Project Description:</label><br>
                         <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
                         <input type="submit" value="Submit">
             </div>
@@ -66,6 +69,7 @@
     </form>
     
 </main>
+<!-- footer with back to top and copyright -->
 <footer>
 <a href="#top">Back to top</a>
 <p>&copy; 2026 M&amp;P Customs. All rights reserved.</p>

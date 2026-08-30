@@ -70,7 +70,11 @@ root/
 ```
 
 ### HTML Structure and Basic Content
-*(To be completed — briefly describe the 5 pages built and key structural decisions.)*
+Home (index.html)
+├── About (about.html)
+├── Services (services.html)
+├── Enquiry (enquiry.html)
+└── Contact (contact.html)
 
 ## Changelog
 
@@ -90,6 +94,7 @@ root/
 | 27 Aug 2026 | About page finished; started enquiry page | HTML Structure |
 | 28 Aug 2026 | Finished contact page | HTML Structure |
 | 30 Aug 2026 | Finished services page (gallery, service descriptions, alt text added); updated README with Project Overview, Goals, Features, Timeline, File/Folder Structure, and Sitemap content | HTML Structure / Documentation |
+| 30 Aug 2026 | Final push Readme complete and comments added final test tomorrow 31 AUG 2026 |
 
 ## References
 
@@ -135,7 +140,7 @@ The Independent Institute of Education (IIE), 2026. Harvard-Anglia style referen
 
 The Independent Institute of Education (IIE), 2026. Guidelines for responsible AI use at The IIE (PDIIE023). [pdf] The Independent Institute of Education. Available at: [IIE internal resource] [Accessed: date].
 
-Anthropic, 2026. Claude (claude-sonnet-4-6). [Large language model]. Available at: [insert this chat's link] [Accessed: date].
+Anthropic, 2026. Claude (claude-sonnet-4-6). [Large language model]. Available at: [https://claude.ai/share/4b129e95-cd00-4497-86d3-9ca3cd2af4b1] [Accessed: date].
 
 ⚠️ **Disclaimer:** All references above must be verified by the student before submission. Claude may make errors in referencing. It is the student's responsibility to ensure all references are accurate and comply with the IIE Harvard-Anglia Style Guide (2026).
 
