@@ -8,33 +8,66 @@
 - **Lecturer:** Jessel Sookha
 
 ## Project Overview
-*(To be completed — pull from your approved Website Project Proposal: what M&P Customs is, what problem it solves, and what the website is for.)*
+M&P Customs is a metal fabrication and 3D printing business that makes advanced manufacturing accessible to anyone, with or without experience. This company specialises in 3D printing in metal and plastic, CNC machining, welding, and CAD designing services.
 
 ## Website Goals and Objectives
-*(To be completed — pull from your approved proposal's Website Goals and Objectives section.)*
+1. Make users aware of our services.
+2. Encourage users to fill out the contact or enquiry form.
 
 ## Key Features and Functionality
-*(To be completed — summarise the site's 5 pages and what each offers: e.g. quote enquiries, service info, contact/map.)*
+1. This site contains 5 pages: Home, About, Enquiry, Contact, and Services.
+2. Each page has a navigation menu that excludes the current page you are on, and each page has a "back to top" function.
 
 ## Timeline and Milestones
-*(To be completed — pull from your approved proposal's Timeline section, or summarise Part 1/2/3 milestones.)*
+- Week 1–2: Proposal approved, planning of HTML structure
+- Week 3–6: CSS styling and responsive design
+- Week 7–10: JavaScript functionality
+- Week 11–12: Testing, refining, and final submission
 
 ## Part 1 Details
 
 ### Content Research and Sourcing
-*(To be completed — briefly describe what was sourced: images, icons, team member details, and how content was organised.)*
+- **Text Content:** Written specifically for M&P Customs based on the approved proposal, covering all 5 pages.
+- **Images:** Sourced from Pexels (free stock photos) for workshop, welding, 3D printing, and CNC-related visuals.
+- **Icons:** Sourced from SVGRepo with appropriate CC0, CC Attribution, and PD licenses.
+- **Team Member Names:** Generated using a South African name generator for realistic fictional team members.
 
 ### Website Structure and Planning
-*(To be completed — brief note on the planning process.)*
+The website was planned using a sitemap created in Figma to understand site hierarchy and how the navigation would be handled.
 
 ### Sitemap
-C:\Users\zzeem\OneDrive\Desktop\web\M&P-Customs>git add .
-warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+![Sitemap](images/Sitemap.png)
 
 Figma link: https://www.figma.com/design/IAVM6PVkYBK4r712gqPqUC/Untitled?node-id=2-42&t=T79HgJ503JorCNSK-1
 
 ### File and Folder Structure
-*(To be completed — briefly describe the final root/css/js/images structure.)*
+```
+root/
+├── index.html
+├── about.html
+├── services.html
+├── enquiry.html
+├── contact.html
+├── styles/
+│   └── styles.css
+├── js/
+│   └── script.js
+└── images/
+    ├── 3D-Printing-1.jpg
+    ├── 3D-Printing-2.jpg
+    ├── CAD2.jpg
+    ├── cad.jpg
+    ├── CNC1.jpg
+    ├── CNC2.jpg
+    ├── welding.jpg
+    ├── welding2.jpg
+    └── svg/
+        ├── instagram-svgrepo-com.svg
+        ├── phone-svgrepo-com.svg
+        ├── mail-alt-svgrepo-com.svg
+        ├── tools-svgrepo-com.svg
+        └── profile-round-1342-svgrepo-com.svg
+```
 
 ### HTML Structure and Basic Content
 *(To be completed — briefly describe the 5 pages built and key structural decisions.)*
@@ -56,6 +89,7 @@ Figma link: https://www.figma.com/design/IAVM6PVkYBK4r712gqPqUC/Untitled?node-id
 | 26 Aug 2026 | Added content to about page; slight modifications to other pages | HTML Structure / Content |
 | 27 Aug 2026 | About page finished; started enquiry page | HTML Structure |
 | 28 Aug 2026 | Finished contact page | HTML Structure |
+| 30 Aug 2026 | Finished services page (gallery, service descriptions, alt text added); updated README with Project Overview, Goals, Features, Timeline, File/Folder Structure, and Sitemap content | HTML Structure / Documentation |
 
 ## References
 
