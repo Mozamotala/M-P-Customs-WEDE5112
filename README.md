@@ -61,6 +61,8 @@ root/
     ├── CNC2.jpg
     ├── welding.jpg
     ├── welding2.jpg
+    ├── Sitemap.png
+    ├── Whatsapp.svg
     └── svg/
         ├── instagram-svgrepo-com.svg
         ├── phone-svgrepo-com.svg
