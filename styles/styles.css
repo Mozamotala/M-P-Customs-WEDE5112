@@ -17,68 +17,63 @@ body {
     letter-spacing: 0.05em;
 }
 header {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     position: relative;
     color: #000000;
-    padding: 10px 0 0 0;
+    padding: 0.625rem 0 0 0;
     text-align: center;
-    
 }
 header h1 {
-    font-size: 1.5em;
-    min-height: 70px;
+    font-size: 1.5rem;
+    min-height: 4.375rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 90px;
-    
+    padding: 0 5.625rem;
 }
 
-
 .container {
-    max-width: 900px;
+    max-width: 56.25rem;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1.25rem;
 }
 
 nav {
     background-color: #000;
     color: #fff;
-    padding: 1em;
+    padding: 1rem;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     justify-content: center;
     flex-wrap: wrap;
 }
 
- h2, h3, h4, h5, h6 {
-    font-size: 1.3em;
+h2, h3, h4, h5, h6 {
+    font-size: 1.3rem;
     text-align: center;
     margin: 0;
     padding: 0;
     font-weight: bold;
-    
-    
 }
 
 p {
     text-align: center;
-    margin: 0 0 1em 0;
+    margin: 0 0 1rem 0;
     line-height: 1.5;
 }
 
 /* Style regular (non-nav) lists so bullets aren't glued to the edge */
 ul:not(nav ul) {
-    max-width: 700px;
-    margin: 0 auto 1em auto;
-    padding-left: 2em;
+    max-width: 43.75rem;
+    margin: 0 auto 1rem auto;
+    padding-left: 2rem;
     line-height: 1.6;
 }
 
@@ -92,40 +87,39 @@ a.cta {
     display: block;
     text-align: center;
     font-weight: bold;
-    margin: 1.5em 0;
+    margin: 1.5rem 0;
 }
 
 footer {
     background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 1em;
+    padding: 1rem;
     width: 100%;
-    margin-top: 20px;
-    font-size: 1em;
-    
+    margin-top: 1.25rem;
+    font-size: 1rem;
 }
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0.625rem;
     justify-content: center;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 0.625rem;
+    margin-top: 0.625rem;
 }
 .gallery img {
     width: 100%;
-    max-width: 300px;
+    max-width: 18.75rem;
     height: auto;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    border-radius: 0.9375rem;
+    margin-bottom: 0.625rem;
+    margin-top: 0.625rem;
 }
 .contact-info {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     display: flex;
-    gap: 30px;
+    gap: 1.875rem;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -135,36 +129,33 @@ footer {
     align-items: center;
     color: inherit;
     text-decoration: none;
-    
 }
 .map-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 .map-container iframe {
-    border-radius: 20px;
+    border-radius: 1.25rem;
     max-width: 100%;
-    
-    
 }
 .team-member img {
-    border-radius: 15px;
-    margin: 0 auto 10px auto;
+    border-radius: 0.9375rem;
+    margin: 0 auto 0.625rem auto;
     display: block;
     max-width: 100%;
     height: auto;
 }
 .form-container {
-    max-width: 600px;
+    max-width: 37.5rem;
     margin: 0 auto;
-    padding: 20px;
+    padding: 1.25rem;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    margin-top: 20px;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
 }
 input, textarea, select {
     font-family: inherit;
@@ -175,50 +166,58 @@ input, textarea, select {
 .form-container select,
 .form-container textarea {
     width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-     border: 1px solid #ccc;
-    border-radius: 10px;
-    
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 0.625rem;
 }
 .form-container input:focus,
 .form-container select:focus,
 .form-container textarea:focus {
-
-    outline: solid blue 2px;
-    
+    outline: solid blue 0.125rem;
 }
 .form-container input[type="submit"] {
     background-color: #000;
     color: #fff;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1rem;
 }
 .form-container input[type="submit"]:hover {
     background-color: #333;  /* when hovered, the submit button will change to a darker shade of black */
 }
 .logo {
     position: absolute;
-    top: 12px;
-    left: 15px;
-    width: 80px;
-    height: 80px;
+    top: 0.75rem;
+    left: 0.9375rem;
+    width: 5rem;
+    height: 5rem;
     object-fit: cover;
     border-radius: 50%;
 }
 @media (max-width: 900px) {
     header h1 {
-        padding: 0 50px;
+        padding: 0 3.125rem;
         font-size: 1.3rem;
     }
     .logo {
-        width: 60px;
-        height: 60px;
+        width: 3.75rem;
+        height: 3.75rem;
     }
     .container {
-        padding: 0 15px;
+        padding: 0 0.9375rem;
+    }
+}
+@media (max-width: 600px) {
+    header h1 {
+        padding: 0 0.9375rem;
+        min-height: auto;
+    }
+    .logo {
+        position: static;
+        display: block;
+        margin: 0 auto 0.625rem auto;
     }
 }
