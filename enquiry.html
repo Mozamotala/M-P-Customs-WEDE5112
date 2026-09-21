@@ -7,72 +7,78 @@
     <meta name="author" content="Mohamed Zaeem Motala">
     <meta name="keywords" content="3D-printing,welding,CNC">
     <meta name="description" content="Enquire about M&P Customs">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <!-- main header and navbar -->
     <header id="top">
-      <br>
-      <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="services.html">Services</a></li>
-        </ul>
-      </nav>
+        <img src="https://placehold.co/600x400@2x.png" alt="M&P Customs Logo" width="100" height="100" class="logo">
+        <h1>
+            Enquiries
+        </h1>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
         <br>  
     </header>
     
-<main>
-    <h1>
-        Want a quote fill this out  
-    </h1>
-    <!-- enquiry form so clients can ask for a quote and pick what they need -->
-    <form>
-        <fieldset>
-            <legend> Enquiries </legend>
-            <div>
-                <label>
-                    Name
-                </label>
-                <input type="text" id="name" name="name" required><br><br>
+    <div class="container">
+        <main>
+            <h2>
+                Want a quote fill this out  
+            </h2>
+            <!-- enquiry form so clients can ask for a quote and pick what they need -->
+            <div class="form-container">
+                <form>
+                    <fieldset>
+                        <legend> Enquiries </legend>
+                        <div>
+                            <label for="name">
+                                Name
+                            </label>
+                            <input type="text" id="name" name="name" required><br><br>
+                        </div>
+                        <div>
+                            <label for="email">
+                                Email
+                            </label>
+                            <input type="email" id="email" name="email" required><br><br>
+                        </div>
+                        <div>
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890"><br><br>
+                        </div>
+                        <!-- dropdown list to choose the service -->
+                        <div>
+                            <label for="services">Services needed</label>
+                            <select id="services" name="services">
+                                <option value="Deselected">Select service </option>
+                                <option value="3D Printing">3D Printing</option>
+                                <option value="CNC">CNC</option>
+                                <option value="Welding">Welding</option>
+                            </select>
+                        </div>
+                 
+                        <div>
+                            <label for="feedback">Project Description:</label><br>
+                            <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+                            <input type="submit" value="Submit">
+                        </div>
+                    </fieldset>
+                </form>
             </div>
-            <div>
-                <label>
-                    Email
-                </label>
-                <input type="email" id="email" name="email" required><br><br>
-            </div>
-            <div>
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890"><br><br>
-            </div>
-            <!-- dropdown list to choose the service -->
-            <div>
-                <label for="services">Services needed</label>
-                <select id="services" name="services">
-                <option value="Deselected">Select service </option>
-                <option value="3D Printing">3D Printing</option>
-                <option value="CNC">CNC</option>
-                <option value="Welding">Welding</option>
-            </select>
-            </div>
-         
-            <div>
-            <label for="feedback">Project Description:</label><br>
-                        <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
-                        <input type="submit" value="Submit">
-            </div>
-
-        </fieldset>
-
-    </form>
-    
-</main>
-<!-- footer with back to top and copyright -->
-<footer>
-<a href="#top">Back to top</a>
-<p>&copy; 2026 M&amp;P Customs. All rights reserved.</p>
-</footer>
+        </main>
+    </div>
+    <!-- footer with back to top and copyright -->
+    <footer>
+        <a href="#top">Back to top</a>
+        <p>&copy; 2026 M&amp;P Customs. All rights reserved.</p>
+    </footer>
 </body>
 </html>
