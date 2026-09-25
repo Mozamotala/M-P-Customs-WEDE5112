@@ -62,13 +62,11 @@ root/
     ├── welding.jpg
     ├── welding2.jpg
     ├── Sitemap.png
-    ├── Whatsapp.svg
     └── svg/
         ├── instagram-svgrepo-com.svg
         ├── phone-svgrepo-com.svg
         ├── mail-alt-svgrepo-com.svg
         ├── tools-svgrepo-com.svg
-        └── profile-round-1342-svgrepo-com.svg
         ├── profile-round-1342-svgrepo-com.svg
         └── whatsapp.svg
 ```
@@ -98,7 +96,6 @@ Home (index.html)
 | 27 Aug 2026 | About page finished; started enquiry page | HTML Structure |
 | 28 Aug 2026 | Finished contact page | HTML Structure |
 | 30 Aug 2026 | Finished services page (gallery, service descriptions, alt text added); updated README with Project Overview, Goals, Features, Timeline, File/Folder Structure, and Sitemap content | HTML Structure / Documentation |
-| 30 Aug 2026 | Final push Readme complete and comments added final test tomorrow 31 AUG 2026 |
 | 30 Aug 2026 | Final push Readme complete and comments added final test tomorrow 31 AUG 2026 | Documentation |
 
 ## References
