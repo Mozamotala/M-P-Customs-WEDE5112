@@ -140,6 +140,19 @@ a.cta {
     text-align: center;
     font-weight: bold;
     margin: 1.5rem 0;
+    color: #2F99C6;
+    text-decoration: none;
+    transition: color 0.2s ease, box-shadow 0.3s ease;
+}
+
+a.cta:hover {
+    color: #2F99C6;
+    text-decoration: underline;
+}
+
+a.cta:active {
+    color: #010101;
+    text-decoration: underline;
 }
 
 footer {
@@ -281,23 +294,6 @@ input, textarea, select {
     height: 5rem;
     object-fit: cover;
     border-radius: 50%;
-}
-
-#get-quote a, #contact-us a {
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    margin: 1.5rem 0;
-}
-
-#get-quote a:hover, #contact-us a:hover {
-    color: #2F99C6;
-    text-decoration: underline;
-}
-
-#get-quote a:active, #contact-us a:active {
-    color: #010101;
-    text-decoration: underline;
 }
 
 .form-container input[type="submit"] {
