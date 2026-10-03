@@ -1,16 +1,23 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.ttf');
+    font-weight: bold;
 }
 
 body {
     font-size: 1.25rem;
-    margin: 0;
-    padding: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #f4f4f4;
     color: #333;
@@ -50,19 +57,61 @@ nav {
 
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     gap: 1.25rem;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-h2, h3, h4, h5, h6 {
-    font-size: 1.3rem;
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease, box-shadow 0.3s ease;
+}
+
+nav a:hover {
+    color: #2F99C6;
+    text-decoration: underline;
+}
+
+nav a:focus {
+    color: #2F99C6;
+    text-decoration: underline;
+    outline: #2F99C6 solid 0.125rem;
+}
+
+nav a:active {
+    color: #010101;
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 1.6rem;
     text-align: center;
-    margin: 0;
-    padding: 0;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 1.15rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 1rem;
+    text-align: center;
     font-weight: bold;
 }
 
@@ -103,6 +152,15 @@ footer {
     font-size: 1rem;
 }
 
+footer a {
+    transition: color 0.2s ease, box-shadow 0.3s ease;
+}
+
+footer a:hover {
+    color: #2F99C6;
+    text-decoration: underline;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -119,23 +177,13 @@ footer {
     border-radius: 0.9375rem;
     margin-bottom: 0.625rem;
     margin-top: 0.625rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, outline 0.3s ease;
 }
 
 .gallery img:hover {
     transform: scale(1.05);
-    transition: transform 0.3s ease;
-    transition: box-shadow 0.3s ease;
     outline: #2F99C6 solid 0.125rem;
     box-shadow: 0 0 8px rgb(1, 103, 255);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
-    gap: 0.625rem;
-    justify-items: center;
-    margin-bottom: 0.625rem;
-    margin-top: 0.625rem;
 }
 
 .contact-info {
@@ -153,6 +201,17 @@ footer {
     align-items: center;
     color: inherit;
     text-decoration: none;
+    transition: color 0.2s ease, box-shadow 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #2F99C6;
+    text-decoration: underline;
+}
+
+.contact-info a:focus-visible {
+    color: #010101;
+    text-decoration: underline;
 }
 
 .map-container {
@@ -165,12 +224,12 @@ footer {
 .map-container iframe {
     border-radius: 1.25rem;
     max-width: 100%;
+    transition: box-shadow 0.3s ease, outline 0.3s ease;
 }
 
 .map-container iframe:hover {
     outline: #2F99C6 solid 0.125rem;
     box-shadow: 0 0 8px rgb(1, 103, 255);
-    transition: box-shadow 0.3s ease;
 }
 
 .team-member img {
@@ -214,16 +273,6 @@ input, textarea, select {
     outline: #2F99C6 solid 0.125rem;
 }
 
-.form-container input[type="submit"] {
-    background-color: #000;
-    color: #fff;
-    padding: 0.625rem 1.25rem;
-    border: none;
-    border-radius: 0.3125rem;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
 .logo {
     position: absolute;
     top: 0.75rem;
@@ -234,29 +283,16 @@ input, textarea, select {
     border-radius: 50%;
 }
 
-footer a:hover {
-    color: #2F99C6;
-    text-decoration: underline;
-    transition: box-shadow 0.3s ease;
-}
-
-#contact-us a:hover {
-    color: #2F99C6;
-    text-decoration: underline;
-    transition: box-shadow 0.3s ease;
-}
-
-#get-quote a:hover {
-    color: #2F99C6;
-    text-decoration: underline;
-    transition: box-shadow 0.3s ease;
-}
-
 #get-quote a, #contact-us a {
     display: block;
     text-align: center;
     font-weight: bold;
     margin: 1.5rem 0;
+}
+
+#get-quote a:hover, #contact-us a:hover {
+    color: #2F99C6;
+    text-decoration: underline;
 }
 
 #get-quote a:active, #contact-us a:active {
@@ -274,14 +310,20 @@ footer a:hover {
     font-weight: bold;
     font-family: inherit;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .form-container input[type="submit"]:hover {
     background-color: #010101;
     color: #2F99C6;
     transform: translateY(-2px);
-    transition: box-shadow 0.3s ease;
+}
+
+.form-container input[type="submit"]:active {
+    background-color: #010101;
+    color: #2F99C6;
+    transform: translateY(0);
+    box-shadow: 0 0 8px rgb(1, 103, 255);
 }
 
 input,
@@ -290,7 +332,7 @@ textarea {
     border: 1px solid #444444;
     border-radius: 0.375rem;
     padding: 0.75rem;
-    color: #000000;
+    color: #333333;
     font-family: inherit;
     font-size: 1rem;
     width: 100%;
@@ -302,23 +344,11 @@ textarea:focus {
     outline: none;
     border-color: #2F99C6;
     box-shadow: 0 0 8px rgb(1, 103, 255);
-    transition: box-shadow 0.3s ease;
 }
 
 textarea {
     resize: vertical;
     min-height: 6rem;
-}
-
-.contact-info a:hover {
-    color: #2F99C6;
-    text-decoration: underline;
-    transition: box-shadow 0.3s ease;
-}
-
-.contact-info a:focus-visible {
-    color: #010101;
-    text-decoration: underline;
 }
 
 /* --- TABLET LAYOUT (Screens smaller than 992px) --- */
@@ -363,15 +393,5 @@ textarea {
 
     h2 {
         font-size: 1.2rem;
-    }
-
-    .form-buttons {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    button {
-        width: 100%;
-        padding: 0.85rem;
     }
 }
