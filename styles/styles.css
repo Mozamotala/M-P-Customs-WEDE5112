@@ -239,6 +239,20 @@ footer a:hover {
     text-decoration: underline;
 }
 
+#get-quote a, #contact-us a {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin: 1.5rem 0;
+}
+
+#get-quote a:active, #contact-us a:active {
+    color: #010101;
+    text-decoration: underline;
+}
+
+.img
+
 .form-container input[type="submit"] {
     background-color: #2F99C6;
     color: #000000;
@@ -283,6 +297,25 @@ textarea {
     min-height: 6rem;
 }
 
+/* --- TABLET LAYOUT (Screens smaller than 992px) --- */
+@media screen and (max-width: 992px) {
+    body {
+        font-size: 1.125rem;
+    }
+
+    main {
+        padding: 0 1rem 1.5rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
 /* --- MOBILE LAYOUT (Screens smaller than 600px) --- */
 @media screen and (max-width: 600px) {
     body {
@@ -297,11 +330,6 @@ textarea {
     nav a {
         display: block;
         padding: 0.6rem 1rem;
-    }
-
-    .me-img {
-        width: 150px;
-        height: 150px;
     }
 
     section {
