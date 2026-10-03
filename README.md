@@ -28,7 +28,8 @@ M&P Customs is a metal fabrication and 3D printing business that makes advanced 
 
 ### Content Research and Sourcing
 - **Text Content:** Written specifically for M&P Customs based on the approved proposal, covering all 5 pages.
-- **Images:** Sourced from Pexels (free stock photos) for workshop, welding, 3D printing, and CNC-related visuals.
+- **Images:** Sourced from Pexels (free stock photos) for workshop, welding, 3D printing, and CNC-related visuals. The team member photos were generated with xAI Grok and the M&P Customs logo was generated with Google Gemini (see References and the AI usage disclosure).
+- **Team Member Photos:** The team member photos are AI-generated images of fictional people, not real staff.
 - **Icons:** Sourced from SVGRepo with appropriate CC0, CC Attribution, and PD licenses.
 - **Team Member Names:** Generated using a South African name generator for realistic fictional team members.
 
@@ -50,8 +51,11 @@ root/
 ├── contact.html
 ├── styles/
 │   └── styles.css
+├── fonts/
+│   ├── Montserrat-Regular.ttf
+│   └── Montserrat-Bold.ttf
 ├── js/
-│   └── script.js
+│   └── .gitkeep
 └── images/
     ├── 3D-Printing-1.jpg
     ├── 3D-Printing-2.jpg
@@ -61,6 +65,10 @@ root/
     ├── CNC2.jpg
     ├── welding.jpg
     ├── welding2.jpg
+    ├── Jacobus-van-der-Walt.jpg
+    ├── Ruth-Matlala.jpg
+    ├── John-Smith.jpg
+    ├── M&P-logo.jpg
     ├── Sitemap.png
     └── svg/
         ├── instagram-svgrepo-com.svg
@@ -77,6 +85,10 @@ Home (index.html)
 ├── Services (services.html)
 ├── Enquiry (enquiry.html)
 └── Contact (contact.html)
+
+## Part 1 Feedback
+
+Part 1 was graded at 100% with no written feedback provided. As a result, no changes were required in response to Part 1 feedback.
 
 ## Changelog
 
@@ -97,6 +109,17 @@ Home (index.html)
 | 28 Aug 2026 | Finished contact page | HTML Structure |
 | 30 Aug 2026 | Finished services page (gallery, service descriptions, alt text added); updated README with Project Overview, Goals, Features, Timeline, File/Folder Structure, and Sitemap content | HTML Structure / Documentation |
 | 30 Aug 2026 | Final push Readme complete and comments added final test tomorrow 31 AUG 2026 | Documentation |
+| 31 Aug 2026 | Added WhatsApp SVG; small changes to README file structure (WhatsApp and sitemap) | Documentation / Images |
+| 21 Sep 2026 | Added fonts | Typography |
+| 21 Sep 2026 | Added note that I had been working on this project before the repository was assigned to us | Documentation |
+| 21 Sep 2026 | Added new CSS rule, fixed bugs with outlines and added focus | CSS Styling |
+| 21 Sep 2026 | Converted all px to rem using a base of 16 | CSS Styling / Typography |
+| 25 Sep 2026 | Updated with CSS and a new README; minor changes to HTML | CSS Styling / Documentation |
+| 3 Oct 2026 | Added hover effects to multiple elements and to photos to make the web page look more alive; updated media queries with what I learned from testing | CSS Styling / Responsive Design |
+| 3 Oct 2026 | Fixed media query | Responsive Design |
+| 3 Oct 2026 | Cleaned up CSS, fixed hover effects, removed duplicates and added transitions | CSS Styling |
+| 3 Oct 2026 | Fixed CSS | CSS Styling |
+| 3 Oct 2026 | Fixed redundant code: had a class and an id for the call-to-action using two separate CSS structures; removed the id and stuck to the class | CSS Styling |
 
 ## References
 
@@ -136,18 +159,45 @@ Google My Maps, n.d. [Online tool]. Available at: https://www.google.com/maps/d/
 
 W3Schools, n.d. [Online resource]. Available at: https://www.w3schools.com/ — reference resource for HTML syntax, semantic elements, and general web development guidance throughout the build.
 
+MDN Web Docs, n.d. rel="preconnect". [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/preconnect [Accessed: 3 October 2026] — used to understand the preconnect hint added to the Contact page.
+
 ### Referencing & Institutional Sources
 
 The Independent Institute of Education (IIE), 2026. Harvard-Anglia style reference guide — adapted for The IIE. [pdf] The Independent Institute of Education. Available at: [IIE internal resource] [Accessed: date].
 
 The Independent Institute of Education (IIE), 2026. Guidelines for responsible AI use at The IIE (PDIIE023). [pdf] The Independent Institute of Education. Available at: [IIE internal resource] [Accessed: date].
 
-Anthropic, 2026. Claude (claude-sonnet-4-6). [Large language model]. Available at: [https://claude.ai/share/4b129e95-cd00-4497-86d3-9ca3cd2af4b1] [Accessed: date].
+The Independent Institute of Education (IIE), 2025. Policy on the Integration of Artificial Intelligence (AI) in Teaching and Learning Practices (IIE033). [pdf] The Independent Institute of Education. Available at: https://irp.cdn-website.com/3f7b6868/files/uploaded/IIE033+Policy+on+the+Integration+of+Artificial+Intelligence+%28AI%29+in+Teaching+and+Learning+Practices+2026.pdf [Accessed: 3 October 2026].
+
+Anthropic. 2026a. Claude (claude-sonnet-4-6). [Large language model]. Available at: [https://claude.ai/share/4b129e95-cd00-4497-86d3-9ca3cd2af4b1] [Accessed: date].
+
+Anthropic. 2026b. Claude ([model name to be confirmed]). [Large language model]. Part 2 chat. Available at: [chat link to be added] [Accessed: date to be added].
+
+Google. 2026a. Gemini. [Large language model]. Prompt: logo image generation for M&P Customs. Available at: https://gemini.google.com/app/d4053b8a2a8efb6f [Accessed: 3 October 2026].
+
+Google. 2026b. Gemini. [Large language model]. Prompt: logo image generation for M&P Customs. Available at: https://gemini.google.com/app/794f559145096723 [Accessed: 3 October 2026].
+
+xAI. 2026. Grok. [Large language model]. Prompt: image generation of people for the M&P Customs website. Available at: https://grok.com/project/c86a9fe4-1160-4165-b951-d566927d2154?tab=conversations [Accessed: 3 October 2026].
 
 ⚠️ **Disclaimer:** All references above must be verified by the student before submission. Claude may make errors in referencing. It is the student's responsibility to ensure all references are accurate and comply with the IIE Harvard-Anglia Style Guide (2026).
 
+## Disclosure of AI Usage in my Assessment
+
+**Part 2 – Designing the Visuals (M&P Customs website)**
+
+| Section within the assessment | AI tool used | Purpose | Date | Link to chat |
+| --- | --- | --- | --- | --- |
+| Logo image (shown in the header on every page) | Google Gemini | Generating the M&P Customs logo image | 3 October 2026 | https://gemini.google.com/app/d4053b8a2a8efb6f and https://gemini.google.com/app/794f559145096723 |
+| Team member images (About page) | xAI Grok | Generating images of the three team members, as the royalty-free images of people I found were not professional enough | 3 October 2026 | https://grok.com/project/c86a9fe4-1160-4165-b951-d566927d2154?tab=conversations |
+
 ## AI Interaction Disclosure
 *(per PDIIE023 — see also annexure in Website Project Proposal document)*
+
+Google Gemini was used to generate the M&P Customs logo image for Part 2 (Google, 2026a; Google, 2026b). The chats are listed in the References section.
+
+xAI Grok was used to generate the images of the team members on the website (xAI, 2026). I found some royalty-free images of people, but they were not professional enough for my liking. Grok has no image-generation limit or a wider limit than most other companies, and the AI-generated images came out perfectly the first time, so I used them instead. The chat is listed in the References section.
+
+**Workflow note:** I did most of the Part 2 work on 3 October 2026, sitting the whole day and taking minimum breaks. My workflow is to sit down and work until I can't use AI for assistance, so that by the time I am almost done I have a spare day. It works well for me. I did not use AI for Part 2 before 3 October 2026; the earlier Part 2 work (21 and 25 September) was done without AI. I only used AI for Part 1 and on 3 October 2026.
 
 ---
 

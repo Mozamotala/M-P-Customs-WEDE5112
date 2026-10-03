@@ -12,26 +12,24 @@
 <body>
     <!-- main header and navbar -->
     <header id="top">
-        <img src="https://placehold.co/600x400@2x.png" alt="M&P Customs Logo" width="100" height="100" class="logo">
+        <img src="images/M&P-logo.jpg" alt="M&P Customs Logo" width="100" height="100" class="logo">
         <h1>
             Enquiries
         </h1>
-        <br>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
                 <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <br>  
     </header>
-    
+
     <div class="container">
         <main>
             <h2>
-                Want a quote fill this out  
+                Want a quote fill this out
             </h2>
             <!-- enquiry form so clients can ask for a quote and pick what they need -->
             <div class="form-container">
@@ -42,33 +40,32 @@
                             <label for="name">
                                 Name
                             </label>
-                            <input type="text" id="name" name="name" required><br><br>
+                            <input type="text" id="name" name="name" required>
                         </div>
                         <div>
                             <label for="email">
                                 Email
                             </label>
-                            <input type="email" id="email" name="email" required><br><br>
+                            <input type="email" id="email" name="email" required>
                         </div>
                         <div>
                             <label for="phone">Phone Number:</label>
-                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890"><br><br>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890">
                         </div>
                         <!-- dropdown list to choose the service -->
                         <div>
                             <label for="services">Services needed</label>
                             <select id="services" name="services">
-                                <option value="Deselected">Select service </option>
+                                <option value="Deselected">Select service</option>
                                 <option value="3D Printing">3D Printing</option>
                                 <option value="CNC">CNC</option>
                                 <option value="Welding">Welding</option>
                             </select>
                         </div>
-                 
                         <div>
-                            <label for="feedback">Project Description:</label><br>
-                            <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
-                            <input class="form-submit" type="submit" value="Submit">
+                            <label for="feedback">Project Description:</label>
+                            <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea>
+                            <input type="submit" value="Submit">
                         </div>
                     </fieldset>
                 </form>
