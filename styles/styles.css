@@ -102,6 +102,7 @@ footer {
     margin-top: 1.25rem;
     font-size: 1rem;
 }
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -110,6 +111,7 @@ footer {
     margin-bottom: 0.625rem;
     margin-top: 0.625rem;
 }
+
 .gallery img {
     width: 100%;
     max-width: 18.75rem;
@@ -122,6 +124,9 @@ footer {
 .gallery img:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    outline: #2F99C6 solid 0.125rem;
+    box-shadow: 0 0 8px rgb(1, 103, 255);
 }
 
 .gallery-grid {
@@ -131,7 +136,6 @@ footer {
     justify-items: center;
     margin-bottom: 0.625rem;
     margin-top: 0.625rem;
-   
 }
 
 .contact-info {
@@ -161,6 +165,12 @@ footer {
 .map-container iframe {
     border-radius: 1.25rem;
     max-width: 100%;
+}
+
+.map-container iframe:hover {
+    outline: #2F99C6 solid 0.125rem;
+    box-shadow: 0 0 8px rgb(1, 103, 255);
+    transition: box-shadow 0.3s ease;
 }
 
 .team-member img {
@@ -227,16 +237,19 @@ input, textarea, select {
 footer a:hover {
     color: #2F99C6;
     text-decoration: underline;
+    transition: box-shadow 0.3s ease;
 }
 
 #contact-us a:hover {
     color: #2F99C6;
     text-decoration: underline;
+    transition: box-shadow 0.3s ease;
 }
 
 #get-quote a:hover {
     color: #2F99C6;
     text-decoration: underline;
+    transition: box-shadow 0.3s ease;
 }
 
 #get-quote a, #contact-us a {
@@ -250,8 +263,6 @@ footer a:hover {
     color: #010101;
     text-decoration: underline;
 }
-
-.img
 
 .form-container input[type="submit"] {
     background-color: #2F99C6;
@@ -270,6 +281,7 @@ footer a:hover {
     background-color: #010101;
     color: #2F99C6;
     transform: translateY(-2px);
+    transition: box-shadow 0.3s ease;
 }
 
 input,
@@ -278,7 +290,7 @@ textarea {
     border: 1px solid #444444;
     border-radius: 0.375rem;
     padding: 0.75rem;
-    color: #ffffff;
+    color: #000000;
     font-family: inherit;
     font-size: 1rem;
     width: 100%;
@@ -290,11 +302,23 @@ textarea:focus {
     outline: none;
     border-color: #2F99C6;
     box-shadow: 0 0 8px rgb(1, 103, 255);
+    transition: box-shadow 0.3s ease;
 }
 
 textarea {
     resize: vertical;
     min-height: 6rem;
+}
+
+.contact-info a:hover {
+    color: #2F99C6;
+    text-decoration: underline;
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-info a:focus-visible {
+    color: #010101;
+    text-decoration: underline;
 }
 
 /* --- TABLET LAYOUT (Screens smaller than 992px) --- */
