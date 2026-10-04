@@ -252,9 +252,9 @@ Anthropic. 2026a. Claude (claude-sonnet-4-6). [Large language model]. Available 
 
 Anthropic. 2026b. Claude (claude-sonnet-5-5). [Large language model]. Part 2 chat. Available at: https://claude.ai/share/2adf8373-a471-4ca3-9f37-c39362904478 [Accessed: 4 October 2026].
 
-Google. 2026a. Gemini. [Large language model]. Prompt: logo image generation for M&P Customs. Available at: https://gemini.google.com/app/d4053b8a2a8efb6f [Accessed: 3 October 2026].
+Google. 2026a. Gemini. [Large language model]. Prompt: logo image generation for M&P Customs. Available at: https://share.gemini.google/TTzp1iO9BTQO [Accessed: 3 October 2026].
 
-Google. 2026b. Gemini. [Large language model]. Prompt: logo image generation for M&P Customs. Available at: https://gemini.google.com/app/794f559145096723 [Accessed: 3 October 2026].
+Google. 2026b. Gemini. [Large language model]. Prompt: logo image generation for M&P Customs. Available at: https://share.gemini.google/KhZRsxa9yTtv [Accessed: 3 October 2026].
 
 xAI. 2026. Grok. [Large language model]. Prompt: image generation of people for the M&P Customs website. Available at: https://grok.com/project/c86a9fe4-1160-4165-b951-d566927d2154?tab=conversations [Accessed: 3 October 2026].
 
@@ -266,7 +266,7 @@ xAI. 2026. Grok. [Large language model]. Prompt: image generation of people for 
 
 | Section within the assessment | AI tool used | Purpose | Date | Link to chat |
 | --- | --- | --- | --- | --- |
-| Logo image (shown in the header on every page) | Google Gemini | Generating the M&P Customs logo image | 3 October 2026 | https://gemini.google.com/app/d4053b8a2a8efb6f and https://gemini.google.com/app/794f559145096723 |
+| Logo image (shown in the header on every page) | Google Gemini | Generating the M&P Customs logo image | 3 October 2026 | https://share.gemini.google/TTzp1iO9BTQO and https://share.gemini.google/KhZRsxa9yTtv |
 | Team member images (About page) | xAI Grok | Generating images of the three team members, as the royalty-free images of people I found were not professional enough | 3 October 2026 | https://grok.com/project/c86a9fe4-1160-4165-b951-d566927d2154?tab=conversations |
 | Part 2 README and references | Claude (claude-sonnet-5-5) | Formatting, spelling and grammar in the README, reference formatting, and feedback on my CSS and write-up, all content and code are my own (Anthropic, 2026b) | 3 and 4 October 2026 | https://claude.ai/share/2adf8373-a471-4ca3-9f37-c39362904478 |
 
