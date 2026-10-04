@@ -150,7 +150,7 @@ The home page was tested in the browser developer tools (responsive mode) at fou
 * **Invisible white text:** In one section the text was getting white from a dark parent and disappearing on the light background. I set the colour directly instead of letting it inherit.
 * **Replacing `<br>` spacers:** The old markup used `<br>` tags for spacing, and they broke when the layout changed. I swapped them for proper margins.
 * **Doubled up class and id on CTAs:** The CTA links had both a class and an id doing the same job, with two CSS blocks. I removed the id and kept the class.
-* **Duplicate team member image rules:** `.team-member img` was in my CSS twice, around line 255 and again around line 374. I merged all the extra `.team-member img` CSS into one CSS block for simplicity.
+* **Duplicate team member image rules:** `.team-member img` was in my CSS twice, once near the top and again further down. I merged all the extra `.team-member img` CSS into one CSS block for simplicity.
 
 ### Wins
 * Hover glow works on the gallery images, team photos, contact icons and the map using outline and box-shadow, so nothing jumps around when you hover.
@@ -191,6 +191,10 @@ Part 1 was graded at 100% with no written feedback provided. As a result, no cha
 | 3 Oct 2026 | Cleaned up CSS, fixed hover effects, removed duplicates and added transitions | CSS Styling |
 | 3 Oct 2026 | Fixed CSS | CSS Styling |
 | 3 Oct 2026 | Fixed redundant code: had a class and an id for the call-to-action using two separate CSS structures; removed the id and stuck to the class | CSS Styling |
+| 3 Oct 2026 | Added real images, removed `<br>` spacers and improved the responsive layout | Images / Responsive Design |
+| 4 Oct 2026 | Added images and some small updates | Images |
+| 4 Oct 2026 | Updated README with Part 2 details and AI links | Documentation |
+| 4 Oct 2026 | Reorganised the CSS into labelled sections and replaced the remaining `<br>` spacers on the About page with CSS | CSS Styling |
 
 ## References
 
@@ -214,6 +218,8 @@ SVG Repo, n.d. Tools. [SVG icon]. CC0 License. Available at: https://www.svgrepo
 
 Filatov, K., n.d. Instagram. [SVG icon]. Gentlecons Interface Icons collection. CC Attribution License. Available at: https://www.svgrepo.com/svg/521711/instagram [Accessed: 18 August 2026].
 
+Filatov, K., n.d. WhatsApp. [SVG icon]. Gentlecons Interface Icons collection. CC Attribution License. Available at: https://www.svgrepo.com/svg/521923/whatsapp [Accessed: 4 October 2026].
+
 Dazzle UI, n.d. Phone. [SVG icon]. Dazzle Line Icons collection. CC Attribution License. Available at: https://www.svgrepo.com/svg/533285/phone [Accessed: 18 August 2026].
 
 Dazzle UI, n.d. Mail Alt. [SVG icon]. Dazzle Line Icons collection. CC Attribution License. Available at: https://www.svgrepo.com/svg/533194/mail-alt [Accessed: 18 August 2026].
@@ -232,6 +238,8 @@ W3Schools, n.d. [Online resource]. Available at: https://www.w3schools.com/ — 
 
 MDN Web Docs, n.d. rel="preconnect". [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/preconnect [Accessed: 3 October 2026] — used to understand the preconnect hint added to the Contact page.
 
+Google Fonts, n.d. Montserrat. [Font]. Available at: https://fonts.google.com/specimen/Montserrat [Accessed: 4 October 2026] — used for the site's typography (Montserrat Regular and Bold).
+
 ### Referencing & Institutional Sources
 
 The Independent Institute of Education (IIE), 2026. Harvard-Anglia style reference guide — adapted for The IIE. [pdf] The Independent Institute of Education. Available at: [IIE internal resource] [Accessed: 4 October 2026].
@@ -242,7 +250,7 @@ The Independent Institute of Education (IIE), 2025. Policy on the Integration of
 
 Anthropic. 2026a. Claude (claude-sonnet-4-6). [Large language model]. Available at: [https://claude.ai/share/4b129e95-cd00-4497-86d3-9ca3cd2af4b1] [Accessed: 4 October 2026].
 
-Anthropic. 2026b. Claude ([model name to be confirmed]). [Large language model]. Part 2 chat. Available at: https://claude.ai/share/2adf8373-a471-4ca3-9f37-c39362904478 [Accessed: 4 October 2026].
+Anthropic. 2026b. Claude (claude-sonnet-5-5). [Large language model]. Part 2 chat. Available at: https://claude.ai/share/2adf8373-a471-4ca3-9f37-c39362904478 [Accessed: 4 October 2026].
 
 Google. 2026a. Gemini. [Large language model]. Prompt: logo image generation for M&P Customs. Available at: https://gemini.google.com/app/d4053b8a2a8efb6f [Accessed: 3 October 2026].
 
@@ -260,6 +268,7 @@ xAI. 2026. Grok. [Large language model]. Prompt: image generation of people for 
 | --- | --- | --- | --- | --- |
 | Logo image (shown in the header on every page) | Google Gemini | Generating the M&P Customs logo image | 3 October 2026 | https://gemini.google.com/app/d4053b8a2a8efb6f and https://gemini.google.com/app/794f559145096723 |
 | Team member images (About page) | xAI Grok | Generating images of the three team members, as the royalty-free images of people I found were not professional enough | 3 October 2026 | https://grok.com/project/c86a9fe4-1160-4165-b951-d566927d2154?tab=conversations |
+| Part 2 README and references | Claude (claude-sonnet-5-5) | Formatting, spelling and grammar in the README, reference formatting, and feedback on my CSS and write-up, all content and code are my own (Anthropic, 2026b) | 3 and 4 October 2026 | https://claude.ai/share/2adf8373-a471-4ca3-9f37-c39362904478 |
 
 ## AI Interaction Disclosure
 *(per PDIIE023 — see also annexure in Website Project Proposal document)*
@@ -267,6 +276,8 @@ xAI. 2026. Grok. [Large language model]. Prompt: image generation of people for 
 Google Gemini was used to generate the M&P Customs logo image for Part 2 (Google, 2026a; Google, 2026b). The chats are listed in the References section.
 
 xAI Grok was used to generate the images of the team members on the website (xAI, 2026). I found some royalty-free images of people, but they were not professional enough for my liking. Grok has no image-generation limit or a wider limit than most other companies, and the AI-generated images came out perfectly the first time, so I used them instead. The chat is listed in the References section.
+
+Anthropic Claude was used for Part 2 to format the README and its references, fix spelling and grammar, and give feedback on my CSS and write-up (Anthropic, 2026b). All content and code are my own. Claude was also used for Part 1 (Anthropic, 2026a). The chats are listed in the References section.
 
 **Workflow note:** I did most of the Part 2 work on 3 October 2026, sitting the whole day and taking minimum breaks. My workflow is to sit down and work until I can't use AI for assistance, so that by the time I am almost done I have a spare day. It works well for me. I did not use AI for Part 2 before 3 October 2026; the earlier Part 2 work (21 and 25 September) was done without AI. I only used AI for Part 1 and on 3 October 2026.
 
