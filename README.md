@@ -70,6 +70,11 @@ root/
     ├── John-Smith.jpg
     ├── M&P-logo.jpg
     ├── Sitemap.png
+    ├── screenshots/
+    │   ├── home-320px.png
+    │   ├── home-700px.png
+    │   ├── home-768px.png
+    │   └── home-1400px.png
     └── svg/
         ├── instagram-svgrepo-com.svg
         ├── phone-svgrepo-com.svg
@@ -85,6 +90,18 @@ Home (index.html)
 ├── Services (services.html)
 ├── Enquiry (enquiry.html)
 └── Contact (contact.html)
+
+## Part 2 Details
+
+### Responsive Design Testing
+The home page was tested in the browser developer tools (responsive mode) at four widths.
+
+| Width | Screenshot |
+|-------|------------|
+| 320px (mobile) | ![Home page at 320px](images/screenshots/home-320px.png) |
+| 700px | ![Home page at 700px](images/screenshots/home-700px.png) |
+| 768px (tablet) | ![Home page at 768px](images/screenshots/home-768px.png) |
+| 1400px (desktop) | ![Home page at 1400px](images/screenshots/home-1400px.png) |
 
 ## Part 1 Feedback
 
@@ -163,13 +180,13 @@ MDN Web Docs, n.d. rel="preconnect". [Online]. Available at: https://developer.m
 
 ### Referencing & Institutional Sources
 
-The Independent Institute of Education (IIE), 2026. Harvard-Anglia style reference guide — adapted for The IIE. [pdf] The Independent Institute of Education. Available at: [IIE internal resource] [Accessed: date].
+The Independent Institute of Education (IIE), 2026. Harvard-Anglia style reference guide — adapted for The IIE. [pdf] The Independent Institute of Education. Available at: [IIE internal resource] [Accessed: 4 October 2026].
 
-The Independent Institute of Education (IIE), 2026. Guidelines for responsible AI use at The IIE (PDIIE023). [pdf] The Independent Institute of Education. Available at: [IIE internal resource] [Accessed: date].
+The Independent Institute of Education (IIE), 2026. Guidelines for responsible AI use at The IIE (PDIIE023). [pdf] The Independent Institute of Education. Available at: [IIE internal resource] [Accessed: 4 October 2026].
 
 The Independent Institute of Education (IIE), 2025. Policy on the Integration of Artificial Intelligence (AI) in Teaching and Learning Practices (IIE033). [pdf] The Independent Institute of Education. Available at: https://irp.cdn-website.com/3f7b6868/files/uploaded/IIE033+Policy+on+the+Integration+of+Artificial+Intelligence+%28AI%29+in+Teaching+and+Learning+Practices+2026.pdf [Accessed: 3 October 2026].
 
-Anthropic. 2026a. Claude (claude-sonnet-4-6). [Large language model]. Available at: [https://claude.ai/share/4b129e95-cd00-4497-86d3-9ca3cd2af4b1] [Accessed: date].
+Anthropic. 2026a. Claude (claude-sonnet-4-6). [Large language model]. Available at: [https://claude.ai/share/4b129e95-cd00-4497-86d3-9ca3cd2af4b1] [Accessed: 4 October 2026].
 
 Anthropic. 2026b. Claude ([model name to be confirmed]). [Large language model]. Part 2 chat. Available at: [chat link to be added] [Accessed: date to be added].
 
