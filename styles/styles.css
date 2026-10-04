@@ -256,8 +256,10 @@ footer a:hover {
     border-radius: 0.9375rem;
     margin: 0 auto 0.625rem auto;
     display: block;
-    max-width: 100%;
     height: auto;
+    transition: transform 0.3s ease, 
+    box-shadow 0.3s ease;
+    max-width: 80%;
 }
 
 .team-member > div {
@@ -371,11 +373,6 @@ textarea {
     filter: drop-shadow(0 0 6px #2F99C6);
 }
 
-.team-member img {
-    transition: transform 0.3s ease, 
-    box-shadow 0.3s ease;
-}
-
 .team-member img:hover {
     transform: scale(1.05);
     box-shadow: 0 0 8px rgb(1, 103, 255);
@@ -409,10 +406,6 @@ textarea {
 
     .contact-info {
         gap: 1.25rem;
-    }
-
-    .team-member img {
-        max-width: 80%;
     }
 }
 

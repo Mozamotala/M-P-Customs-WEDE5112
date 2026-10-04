@@ -93,7 +93,43 @@ Home (index.html)
 
 ## Part 2 Details
 
-### Responsive Design Testing
+### CSS Approach
+I went desktop-first. I wrote the main styles for big screens (inline nav, centred gallery row, logo positioned on top in the header), and then used max-width media queries at 992px and 600px to strip styles away for smaller viewports.
+
+### Breakpoints
+* **992px (Tablet):** This is where the full-size layout starts feeling too big. Text and images look fine on desktop, but under about 1000px they get too large, so I shrink them here.
+* **600px (Mobile):** Below this the nav bar doesn't fit properly and the header needs to change, so this is where I switch to the stacked layout.
+
+### Responsive Changes
+* **At 992px:**
+  * Body font drops from 1.25rem down to 1.125rem.
+  * `<main>` gets 1rem side padding and 1.5rem bottom padding.
+  * Header `h1` goes up a bit to 1.6rem to make up for the smaller body text.
+  * `h2` goes down to 1.4rem.
+  * Gallery images max out at 14rem instead of 18.75rem.
+  * Form container shrinks to 90% max-width.
+  * Gap between contact icons drops from 1.875rem to 1.25rem.
+  * Team photos max out at 80% width.
+* **At 600px:**
+  * Body font drops down to 1rem.
+  * Nav links stack on top of each other with a 0.5rem gap, and each link is a block with padding so it's easier to tap.
+  * Logo goes from `position: absolute` to `position: static` and is centred with `margin: 0 auto 0.5rem auto`.
+  * `h2` goes down to 1.2rem.
+  * Header `h1` padding goes down to 1rem, and `min-height: auto` removes the forced gap.
+  * Sections get 1rem padding and a smaller 0.5rem border radius.
+
+### Accessibility
+* **Focus States:** Nav links, CTAs, form inputs and contact links all show when you focus on them. Nav and inputs get a `#2F99C6` outline, and contact links change colour and get an underline.
+* **Semantic HTML:** I used `<header>`, `<nav>`, `<main>`, `<section>` and `<footer>`. Each page has one `<h1>`, then `<h2>` down to `<h4>` in order.
+* **Alt Text & Labels:** Every image has alt text that describes it (the logo's alt is "M&P Customs Logo"). Every form input has a `<label>`, and I didn't use placeholders as the only label.
+* **Colour Contrast:** The body text (`#333` on `#f4f4f4`) and the blue on black (`#2F99C6` on `#000`) both pass WCAG AA. The blue links and CTAs on the light `#f4f4f4` background sit at about 2.9:1, which fails AA for normal text. If I had more time, I'd make the blue darker for the light background.
+
+### Testing
+* I used Chrome DevTools responsive mode at 320px, 700px, 768px and 1400px. Screenshots of the home page at all four sizes are in the README.
+* I tabbed through the contact and enquiry forms to check the focus order made sense and the focus rings were easy to see.
+* I checked the gallery, form and nav at each breakpoint.
+
+#### Responsive Design Testing
 The home page was tested in the browser developer tools (responsive mode) at four widths.
 
 | Width | Screenshot |
@@ -102,6 +138,24 @@ The home page was tested in the browser developer tools (responsive mode) at fou
 | 700px | ![Home page at 700px](images/screenshots/home-700px.png) |
 | 768px (tablet) | ![Home page at 768px](images/screenshots/home-768px.png) |
 | 1400px (desktop) | ![Home page at 1400px](images/screenshots/home-1400px.png) |
+
+### Performance
+* I added preconnect hints for google.com and maps.googleapis.com on the Contact page.
+* The map iframe uses `loading="lazy"`.
+* The logo, team photos and contact icons all have a set width and height so the page doesn't jump around while images load.
+* I haven't made smaller copies of the images or used `srcset` yet; the images load at full size and CSS scales them down.
+
+### Challenges & Solutions
+* **iframe hover:** The map iframe was blocking the hover styles on its container. I put the hover effect straight on `.map-container iframe` using outline and box-shadow, so the glow shows on the map itself.
+* **Invisible white text:** In one section the text was getting white from a dark parent and disappearing on the light background. I set the colour directly instead of letting it inherit.
+* **Replacing `<br>` spacers:** The old markup used `<br>` tags for spacing, and they broke when the layout changed. I swapped them for proper margins.
+* **Doubled up class and id on CTAs:** The CTA links had both a class and an id doing the same job, with two CSS blocks. I removed the id and kept the class.
+* **Duplicate team member image rules:** `.team-member img` was in my CSS twice, around line 255 and again around line 374. I merged all the extra `.team-member img` CSS into one CSS block for simplicity.
+
+### Wins
+* Hover glow works on the gallery images, team photos, contact icons and the map using outline and box-shadow, so nothing jumps around when you hover.
+* Changing the logo from absolute to static at 600px and centring it stops it from covering the title on mobile screens.
+* Changing every px value to `rem` (base 16) made the whole stylesheet scale properly.
 
 ## Part 1 Feedback
 
@@ -188,7 +242,7 @@ The Independent Institute of Education (IIE), 2025. Policy on the Integration of
 
 Anthropic. 2026a. Claude (claude-sonnet-4-6). [Large language model]. Available at: [https://claude.ai/share/4b129e95-cd00-4497-86d3-9ca3cd2af4b1] [Accessed: 4 October 2026].
 
-Anthropic. 2026b. Claude ([model name to be confirmed]). [Large language model]. Part 2 chat. Available at: [chat link to be added] [Accessed: date to be added].
+Anthropic. 2026b. Claude ([model name to be confirmed]). [Large language model]. Part 2 chat. Available at: https://claude.ai/share/2adf8373-a471-4ca3-9f37-c39362904478 [Accessed: 4 October 2026].
 
 Google. 2026a. Gemini. [Large language model]. Prompt: logo image generation for M&P Customs. Available at: https://gemini.google.com/app/d4053b8a2a8efb6f [Accessed: 3 October 2026].
 
