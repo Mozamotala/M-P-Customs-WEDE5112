@@ -150,12 +150,14 @@ The home page was tested in the browser developer tools (responsive mode) at fou
 * **Invisible white text:** In one section the text was getting white from a dark parent and disappearing on the light background. I set the colour directly instead of letting it inherit.
 * **Replacing `<br>` spacers:** The old markup used `<br>` tags for spacing, and they broke when the layout changed. I swapped them for proper margins.
 * **Doubled up class and id on CTAs:** The CTA links had both a class and an id doing the same job, with two CSS blocks. I removed the id and kept the class.
-* **Duplicate team member image rules:** `.team-member img` was in my CSS twice, once near the top and again further down. I merged all the extra `.team-member img` CSS into one CSS block for simplicity.
+* **Duplicate team member image rules:** `.team-member img` was in my CSS twice, once near the top and again further down. I merged them into one CSS block.
+* **Uneven gallery grid:** The gallery images were different aspect ratios, so the rows were staggered. I added `height: 18.75rem` and `object-fit: cover` to `.gallery img` so every image renders as the same square shape and the grid lines up evenly.
 
 ### Wins
 * Hover glow works on the gallery images, team photos, contact icons and the map using outline and box-shadow, so nothing jumps around when you hover.
 * Changing the logo from absolute to static at 600px and centring it stops it from covering the title on mobile screens.
 * Changing every px value to `rem` (base 16) made the whole stylesheet scale properly.
+* The gallery now lines up evenly on every breakpoint because all images are locked to the same square shape.
 
 ## Part 1 Feedback
 
@@ -195,6 +197,8 @@ Part 1 was graded at 100% with no written feedback provided. As a result, no cha
 | 4 Oct 2026 | Added images and some small updates | Images |
 | 4 Oct 2026 | Updated README with Part 2 details and AI links | Documentation |
 | 4 Oct 2026 | Reorganised the CSS into labelled sections and replaced the remaining `<br>` spacers on the About page with CSS | CSS Styling |
+| 5 Oct 2026 | Reverted the `<picture>` and `srcset` markup on the gallery and team photos after deciding not to make the smaller copies; merged the duplicate `.team-member img` rules | CSS Styling / Images |
+| 5 Oct 2026 | Locked the gallery images to a fixed square shape with `object-fit: cover` so the grid lines up evenly; updated README Performance and Challenges sections to match | CSS Styling / Documentation |
 
 ## References
 
@@ -268,7 +272,7 @@ xAI. 2026. Grok. [Large language model]. Prompt: image generation of people for 
 | --- | --- | --- | --- | --- |
 | Logo image (shown in the header on every page) | Google Gemini | Generating the M&P Customs logo image | 3 October 2026 | https://share.gemini.google/TTzp1iO9BTQO and https://share.gemini.google/KhZRsxa9yTtv |
 | Team member images (About page) | xAI Grok | Generating images of the three team members, as the royalty-free images of people I found were not professional enough | 3 October 2026 | https://grok.com/project/c86a9fe4-1160-4165-b951-d566927d2154?tab=conversations |
-| Part 2 README and references | Claude (claude-sonnet-5-5) | Formatting, spelling and grammar in the README, reference formatting, and feedback on my CSS and write-up, all content and code are my own (Anthropic, 2026b) | 3 and 4 October 2026 | https://claude.ai/share/2adf8373-a471-4ca3-9f37-c39362904478 |
+| Part 2 README and references | Claude (claude-sonnet-5-5) | Formatting, spelling and grammar in the README, reference formatting, and feedback on my CSS and write-up, all content and code are my own (Anthropic, 2026b) | 3, 4 and 5 October 2026 | https://claude.ai/share/2adf8373-a471-4ca3-9f37-c39362904478 |
 
 ## AI Interaction Disclosure
 *(per PDIIE023 — see also annexure in Website Project Proposal document)*

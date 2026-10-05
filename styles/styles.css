@@ -229,7 +229,8 @@ footer a:hover {
 .gallery img {
     width: 100%;
     max-width: 18.75rem;
-    height: auto;
+    height: 18.75rem;
+    object-fit: cover;
     border-radius: 0.9375rem;
     margin-bottom: 0.625rem;
     margin-top: 0.625rem;
