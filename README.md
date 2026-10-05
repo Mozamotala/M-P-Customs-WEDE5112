@@ -159,6 +159,11 @@ The home page was tested in the browser developer tools (responsive mode) at fou
 * Changing every px value to `rem` (base 16) made the whole stylesheet scale properly.
 * The gallery now lines up evenly on every breakpoint because all images are locked to the same square shape.
 
+### Known Limitations
+1. **Responsive images (3.3):** There is no `srcset`, `sizes` or `<picture>` on any page. I looked at adding them but I couldn't make the smaller file copies needed, so I reverted to plain `<img>` tags to keep the site working. This is worth 5 marks and I'm accepting the loss unless there's time to make the copies.
+2. **Multi-column desktop layout (3.1):** My desktop layout is a single centred column, not multi-column. This affects the layout and media query marks (15 total). The team members section would be the easiest place to add a flex row that stacks below 992px.
+3. **Device-named screenshots (3.4):** My README screenshots are widths only, with no device names like iPhone SE or iPad Mini. This is quick to fix in Chrome DevTools.
+
 ## Part 1 Feedback
 
 Part 1 was graded at 100% with no written feedback provided. As a result, no changes were required in response to Part 1 feedback.
