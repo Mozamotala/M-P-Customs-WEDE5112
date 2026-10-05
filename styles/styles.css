@@ -229,7 +229,7 @@ footer a:hover {
 .gallery img {
     width: 100%;
     max-width: 18.75rem;
-    height: 18.75rem;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 0.9375rem;
     margin-bottom: 0.625rem;
@@ -456,6 +456,10 @@ textarea {
         max-width: 14rem;
     }
 
+    .gallery img {
+        aspect-ratio: 1 / 1;
+    }
+
     .form-container {
         max-width: 90%;
     }
@@ -467,6 +471,26 @@ textarea {
         .team-member > div {
         flex: 1 1 100%;
         max-width: 80%;
+    }
+}   
+
+/* --- SMALL TABLET / LARGE PHONE (Screens smaller than 768px) --- */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 1.0625rem;
+    }
+
+    .gallery img {
+        max-width: 12rem;
+    }
+
+    .form-container {
+        max-width: 85%;
+    }
+
+    .team-member > div {
+        flex: 1 1 100%;
+        max-width: 70%;
     }
 }
 
