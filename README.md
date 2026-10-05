@@ -98,6 +98,7 @@ I went desktop-first. I wrote the main styles for big screens (inline nav, centr
 
 ### Breakpoints
 * **992px (Tablet):** This is where the full-size layout starts feeling too big. Text and images look fine on desktop, but under about 1000px they get too large, so I shrink them here.
+* **768px (Small tablet):** Between the tablet and mobile sizes the layout was still a bit large, so I added this extra step to bring the text, gallery, form and team cards down a little before the mobile layout takes over.
 * **600px (Mobile):** Below this the nav bar doesn't fit properly and the header needs to change, so this is where I switch to the stacked layout.
 
 ### Responsive Changes
@@ -111,6 +112,11 @@ I went desktop-first. I wrote the main styles for big screens (inline nav, centr
   * Gap between contact icons drops from 1.875rem to 1.25rem.
   * Team photos max out at 80% width.
   * Team member cards switch from side-by-side on desktop to a single stacked column with `flex: 1 1 100%` and `max-width: 80%`.
+* **At 768px (small tablet):**
+  * Body font drops to 1.0625rem.
+  * Gallery images max out at 12rem.
+  * Form container shrinks to 85%.
+  * Team member cards stack at 70% width.
 * **At 600px:**
   * Body font drops down to 1rem.
   * Nav links stack on top of each other with a 0.5rem gap, and each link is a block with padding so it's easier to tap.
@@ -214,6 +220,7 @@ Part 1 was graded at 100% with no written feedback provided. As a result, no cha
 | 5 Oct 2026 | Added `srcset`, `sizes` and a `<picture>` element with smaller image copies; filled in the real pixel widths of every full-size image | Responsive Images |
 | 5 Oct 2026 | Made the team section multi-column on desktop (`display: flex` with `flex: 1 1 18rem`, stacking below 992px) and added shared heading `line-height` and `letter-spacing` rules | CSS Styling |
 | 5 Oct 2026 | Darkened the link colour to improve contrast on the light background | Accessibility |
+| 5 Oct 2026 | Added a 768px breakpoint (small tablet) with a smaller body font, gallery images, form container and team cards | Responsive Design |
 | 5 Oct 2026 | Updated README Performance, Known Limitations, Gallery and Accessibility sections to reflect the responsive image and multi-column work | Documentation |
 
 ## References
@@ -270,7 +277,7 @@ The Independent Institute of Education (IIE), 2025. Policy on the Integration of
 
 Anthropic. 2026a. Claude (claude-sonnet-4-6). [Large language model]. Available at: [https://claude.ai/share/4b129e95-cd00-4497-86d3-9ca3cd2af4b1] [Accessed: 4 October 2026].
 
-Anthropic. 2026b. Claude (claude-sonnet-5-5). [Large language model]. Part 2 chat. Available at: [PASTE THIS CHAT'S SHARE LINK] [Accessed: 5 October 2026].
+Anthropic. 2026b. Claude (claude-sonnet-5-5). [Large language model]. Part 2 chat. Available at: [https://claude.ai/share/2adf8373-a471-4ca3-9f37-c39362904478 |] [Accessed: 5 October 2026].
 
 Google. 2026a. Gemini. [Large language model]. Prompt: logo image generation for M&P Customs. Available at: https://share.gemini.google/TTzp1iO9BTQO [Accessed: 3 October 2026].
 
@@ -288,7 +295,7 @@ xAI. 2026. Grok. [Large language model]. Prompt: image generation of people for 
 | --- | --- | --- | --- | --- |
 | Logo image (shown in the header on every page) | Google Gemini | Generating the M&P Customs logo image | 3 October 2026 | https://share.gemini.google/TTzp1iO9BTQO and https://share.gemini.google/KhZRsxa9yTtv |
 | Team member images (About page) | xAI Grok | Generating images of the three team members, as the royalty-free images of people I found were not professional enough | 3 October 2026 | https://grok.com/project/c86a9fe4-1160-4165-b951-d566927d2154?tab=conversations |
-| Part 2 responsive images and README updates | Claude (claude-sonnet-5-5) | Resizing the images, filling in the real pixel widths in the `srcset` attributes, and wording help for the README updates. All content and code are my own (Anthropic, 2026b) | 3, 4 and 5 October 2026 | [PASTE THIS CHAT'S SHARE LINK] |
+| Part 2 responsive images and README updates | Claude (claude-sonnet-5-5) | Resizing the images, filling in the real pixel widths in the `srcset` attributes, and wording help for the README updates. All content and code are my own (Anthropic, 2026b) | 3, 4 and 5 October 2026 | [https://claude.ai/share/2adf8373-a471-4ca3-9f37-c39362904478 |] |
 
 ## AI Interaction Disclosure
 *(per PDIIE023 — see also annexure in Website Project Proposal document)*
