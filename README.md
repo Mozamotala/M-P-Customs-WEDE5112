@@ -276,7 +276,7 @@ The Independent Institute of Education (IIE), 2025. Policy on the Integration of
 
 Anthropic. 2026a. Claude (claude-sonnet-4-6). [Large language model]. Available at: [https://claude.ai/share/4b129e95-cd00-4497-86d3-9ca3cd2af4b1] [Accessed: 4 October 2026].
 
-Anthropic. 2026b. Claude (claude-sonnet-5-5). [Large language model]. Part 2 chat. Available at: [https://claude.ai/share/2adf8373-a471-4ca3-9f37-c39362904478 |] [Accessed: 5 October 2026].
+Anthropic. 2026b. Claude (claude-sonnet-5-5). [Large language model]. Part 2 chat. Available at: https://claude.ai/share/2adf8373-a471-4ca3-9f37-c39362904478 [Accessed: 5 October 2026].
 
 Google. 2026a. Gemini. [Large language model]. Prompt: logo image generation for M&P Customs. Available at: https://share.gemini.google/TTzp1iO9BTQO [Accessed: 3 October 2026].
 
