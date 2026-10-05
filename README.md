@@ -58,16 +58,27 @@ root/
 │   └── .gitkeep
 └── images/
     ├── 3D-Printing-1.jpg
+    ├── 3D-Printing-1-small.jpg
     ├── 3D-Printing-2.jpg
+    ├── 3D-Printing-2-small.jpg
     ├── CAD2.jpg
+    ├── CAD2-small.jpg
     ├── cad.jpg
+    ├── cad-small.jpg
     ├── CNC1.jpg
+    ├── CNC1-small.jpg
     ├── CNC2.jpg
+    ├── CNC2-small.jpg
     ├── welding.jpg
+    ├── welding-small.jpg
     ├── welding2.jpg
+    ├── welding2-small.jpg
     ├── Jacobus-van-der-Walt.jpg
+    ├── Jacobus-van-der-Walt-small.jpg
     ├── Ruth-Matlala.jpg
+    ├── Ruth-Matlala-small.jpg
     ├── John-Smith.jpg
+    ├── John-Smith-small.jpg
     ├── M&P-logo.jpg
     ├── Sitemap.png
     ├── screenshots/
