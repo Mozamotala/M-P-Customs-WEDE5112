@@ -155,7 +155,7 @@ The home page was tested in the browser developer tools (responsive mode) at fou
 * The map iframe uses `loading="lazy"`.
 * The logo, team photos and contact icons all have a set width and height so the page doesn't jump around while images load.
 * Team photos and gallery images now use `srcset` and `sizes`, so the browser can pick between a smaller copy and the full-size file depending on the screen. The first gallery image is also wrapped in `<picture>` with a `<source media="(max-width: 600px)">` line, so on phones it loads the small file directly. The `sizes` attribute tells the browser roughly how wide each image will be displayed at each breakpoint (90vw on mobile, 14rem on tablet, 18.75rem on desktop), and the `srcset` gives it the pixel widths of the available files so it can pick the smallest one that will still look sharp.
-* Gallery images use a fixed height (`18.75rem`) and `object-fit: cover` on desktop, so they line up evenly in the grid regardless of the source image aspect ratio. Below 992px the max-width drops to 14rem but the height stays the same, so the images end up taller than they are wide.
+* Gallery images use `aspect-ratio: 1 / 1` and `object-fit: cover`, so they line up evenly in the grid regardless of the source image aspect ratio. Below 992px the max-width drops to 14rem (and 12rem at 768px), but the images stay square.
 
 ### Challenges & Solutions
 * **iframe hover:** The map iframe was blocking the hover styles on its container. I put the hover effect straight on `.map-container iframe` using outline and box-shadow, so the glow shows on the map itself.
@@ -163,7 +163,7 @@ The home page was tested in the browser developer tools (responsive mode) at fou
 * **Replacing `<br>` spacers:** The old markup used `<br>` tags for spacing, and they broke when the layout changed. I swapped them for proper margins.
 * **Doubled up class and id on CTAs:** The CTA links had both a class and an id doing the same job, with two CSS blocks. I removed the id and kept the class.
 * **Duplicate team member image rules:** `.team-member img` was in my CSS twice, once near the top and again further down. I merged them into one CSS block.
-* **Uneven gallery grid:** The gallery images were different aspect ratios, so the rows were staggered. I added `height: 18.75rem` and `object-fit: cover` to `.gallery img` so every image renders as the same shape at desktop and the grid lines up evenly.
+* **Uneven gallery grid:** The gallery images were different aspect ratios, so the rows were staggered. I added `aspect-ratio: 1 / 1` and `object-fit: cover` to `.gallery img` so every image renders as the same square shape and the grid lines up evenly at every breakpoint.
 * **Real pixel widths in srcset:** The first version of my `srcset` had placeholder values instead of real numbers, which meant the browser couldn't use them. I got the actual pixel width of each full-size image and replaced every placeholder with the correct number.
 
 ### Wins
@@ -171,13 +171,12 @@ The home page was tested in the browser developer tools (responsive mode) at fou
 * Changing the logo from absolute to static at 600px and centring it stops it from covering the title on mobile screens.
 * Changing every px value to `rem` (base 16) made the whole stylesheet scale properly.
 * The team section now uses flexbox and sits side-by-side on desktop instead of everything stacking in one long column.
-* The gallery lines up evenly at desktop width because all images share the same height and `object-fit: cover` crops the excess.
+* The gallery lines up evenly at every breakpoint because all images share the same `aspect-ratio` and `object-fit: cover` crops the excess.
 
 ### Known Limitations
 1. The blue link colour on the light background was darkened to improve contrast. It passes AA on white but comes out around 4.4:1 on the `#f4f4f4` background, just under the 4.5:1 threshold. Darkening it further would fix this.
 2. The team section sits side-by-side on desktop and stacks below 992px, but the rest of the desktop layout is still a single centred column. The gallery is a centred flex row rather than a fixed grid, and each page only has one content column. A fuller multi-column layout would match the brief more closely.
-3. Gallery images are the same height across all breakpoints but the width shrinks below 992px, so they become slightly taller than they are wide on tablet and mobile. An `aspect-ratio` rule would keep them square at every breakpoint.
-4. The screenshots in this README are named by width (320px, 700px, 768px, 1400px) rather than by device. I tested at those widths in Chrome DevTools but didn't capture named-device screenshots like iPhone SE or iPad Mini before the deadline.
+3. The screenshots in this README are named by width (320px, 700px, 768px, 1400px) rather than by device. I tested at those widths in Chrome DevTools but didn't capture named-device screenshots like iPhone SE or iPad Mini before the deadline.
 
 ## Part 1 Feedback
 
