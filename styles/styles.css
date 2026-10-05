@@ -167,7 +167,7 @@ ul:not(nav ul) {
 }
 
 a {
-    color: #2F99C6;
+    color: #1F7A9E;
     text-decoration: none;
 }
 
@@ -177,13 +177,13 @@ a.cta {
     text-align: center;
     font-weight: bold;
     margin: 1.5rem 0;
-    color: #2F99C6;
+    color: #1F7A9E;
     text-decoration: none;
     transition: color 0.2s ease, box-shadow 0.3s ease;
 }
 
 a.cta:hover {
-    color: #2F99C6;
+    color: #1F7A9E;
     text-decoration: underline;
 }
 
@@ -305,6 +305,19 @@ footer a:hover {
 /* ==========================================================================
    About Page - Team Members
    ========================================================================== */
+.team-member {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.team-member > div {
+    flex: 1 1 18rem;
+    max-width: 20rem;
+}
+
 .team-member img {
     border-radius: 0.9375rem;
     margin: 0 auto 0.625rem auto;
@@ -312,16 +325,12 @@ footer a:hover {
     height: auto;
     transition: transform 0.3s ease, 
     box-shadow 0.3s ease;
-    max-width: 80%;
+    max-width: 100%;
 }
 
 .team-member img:hover {
     transform: scale(1.05);
     box-shadow: 0 0 8px rgb(1, 103, 255);
-}
-
-.team-member > div {
-    margin-bottom: 1.5rem;
 }
 
 /* Team member role title */
@@ -454,6 +463,11 @@ textarea {
     .contact-info {
         gap: 1.25rem;
     }
+
+        .team-member > div {
+        flex: 1 1 100%;
+        max-width: 80%;
+    }
 }
 
 /* --- MOBILE LAYOUT (Screens smaller than 600px) --- */
@@ -476,6 +490,11 @@ textarea {
         padding: 1rem;
         border-radius: 0.5rem;
     }
+
+    h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
 
     h2 {
         font-size: 1.2rem;

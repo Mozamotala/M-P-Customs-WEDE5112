@@ -110,6 +110,7 @@ I went desktop-first. I wrote the main styles for big screens (inline nav, centr
   * Form container shrinks to 90% max-width.
   * Gap between contact icons drops from 1.875rem to 1.25rem.
   * Team photos max out at 80% width.
+  * Team member cards switch from side-by-side on desktop to a single stacked column with `flex: 1 1 100%` and `max-width: 80%`.
 * **At 600px:**
   * Body font drops down to 1rem.
   * Nav links stack on top of each other with a 0.5rem gap, and each link is a block with padding so it's easier to tap.
@@ -118,11 +119,15 @@ I went desktop-first. I wrote the main styles for big screens (inline nav, centr
   * Header `h1` padding goes down to 1rem, and `min-height: auto` removes the forced gap.
   * Sections get 1rem padding and a smaller 0.5rem border radius.
 
+**Multi-column team section:** The team members were stacking in one column even on wide screens. I changed `.team-member` to `display: flex` with `flex-wrap: wrap`, gave each card `flex: 1 1 18rem` and a `max-width`, and added a gap between cards. On desktop this lets the cards sit side by side (two per row at my content width, three when the viewport is wide enough). Below 992px, the media query switches each card to `flex: 1 1 100%` with `max-width: 80%`, so they stack back into a single column.
+
+**Heading typography:** I added a shared rule for `h2` through `h6` with `line-height: 1.3` and `letter-spacing: -0.01em`, so the heading scale is consistent across breakpoints instead of being defined size-by-size only.
+
 ### Accessibility
 * **Focus States:** Nav links, CTAs, form inputs and contact links all show when you focus on them. Nav and inputs get a `#2F99C6` outline, and contact links change colour and get an underline.
 * **Semantic HTML:** I used `<header>`, `<nav>`, `<main>`, `<section>` and `<footer>`. Each page has one `<h1>`, then `<h2>` down to `<h4>` in order.
 * **Alt Text & Labels:** Every image has alt text that describes it (the logo's alt is "M&P Customs Logo"). Every form input has a `<label>`, and I didn't use placeholders as the only label.
-* **Colour Contrast:** The body text (`#333` on `#f4f4f4`) and the blue on black (`#2F99C6` on `#000`) both pass WCAG AA. The blue links and CTAs on the light `#f4f4f4` background sit at about 2.9:1, which fails AA for normal text. If I had more time, I'd make the blue darker for the light background.
+* **Colour Contrast:** Body text (`#333` on `#f4f4f4`) and blue on black (`#2F99C6` on `#000`) both pass WCAG AA. The blue link colour on the light `#f4f4f4` background has been darkened from `#2F99C6` to improve contrast. It passes AA on white backgrounds; on the `#f4f4f4` background it comes out at around 4.4:1, just under the 4.5:1 AA threshold for normal text. Darkening it further would be the next step; this is noted in Known Limitations.
 
 ### Testing
 * I used Chrome DevTools responsive mode at 320px, 700px, 768px and 1400px. Screenshots of the home page at all four sizes are in the README.
@@ -143,7 +148,8 @@ The home page was tested in the browser developer tools (responsive mode) at fou
 * I added preconnect hints for google.com and maps.googleapis.com on the Contact page.
 * The map iframe uses `loading="lazy"`.
 * The logo, team photos and contact icons all have a set width and height so the page doesn't jump around while images load.
-* I haven't made smaller copies of the images or used `srcset` yet; the images load at full size and CSS scales them down.
+* Team photos and gallery images now use `srcset` and `sizes`, so the browser can pick between a smaller copy and the full-size file depending on the screen. The first gallery image is also wrapped in `<picture>` with a `<source media="(max-width: 600px)">` line, so on phones it loads the small file directly. The `sizes` attribute tells the browser roughly how wide each image will be displayed at each breakpoint (90vw on mobile, 14rem on tablet, 18.75rem on desktop), and the `srcset` gives it the pixel widths of the available files so it can pick the smallest one that will still look sharp.
+* Gallery images use a fixed height (`18.75rem`) and `object-fit: cover` on desktop, so they line up evenly in the grid regardless of the source image aspect ratio. Below 992px the max-width drops to 14rem but the height stays the same, so the images end up taller than they are wide.
 
 ### Challenges & Solutions
 * **iframe hover:** The map iframe was blocking the hover styles on its container. I put the hover effect straight on `.map-container iframe` using outline and box-shadow, so the glow shows on the map itself.
@@ -151,18 +157,21 @@ The home page was tested in the browser developer tools (responsive mode) at fou
 * **Replacing `<br>` spacers:** The old markup used `<br>` tags for spacing, and they broke when the layout changed. I swapped them for proper margins.
 * **Doubled up class and id on CTAs:** The CTA links had both a class and an id doing the same job, with two CSS blocks. I removed the id and kept the class.
 * **Duplicate team member image rules:** `.team-member img` was in my CSS twice, once near the top and again further down. I merged them into one CSS block.
-* **Uneven gallery grid:** The gallery images were different aspect ratios, so the rows were staggered. I added `height: 18.75rem` and `object-fit: cover` to `.gallery img` so every image renders as the same square shape and the grid lines up evenly.
+* **Uneven gallery grid:** The gallery images were different aspect ratios, so the rows were staggered. I added `height: 18.75rem` and `object-fit: cover` to `.gallery img` so every image renders as the same shape at desktop and the grid lines up evenly.
+* **Real pixel widths in srcset:** The first version of my `srcset` had placeholder values instead of real numbers, which meant the browser couldn't use them. I got the actual pixel width of each full-size image and replaced every placeholder with the correct number.
 
 ### Wins
 * Hover glow works on the gallery images, team photos, contact icons and the map using outline and box-shadow, so nothing jumps around when you hover.
 * Changing the logo from absolute to static at 600px and centring it stops it from covering the title on mobile screens.
 * Changing every px value to `rem` (base 16) made the whole stylesheet scale properly.
-* The gallery now lines up evenly on every breakpoint because all images are locked to the same square shape.
+* The team section now uses flexbox and sits side-by-side on desktop instead of everything stacking in one long column.
+* The gallery lines up evenly at desktop width because all images share the same height and `object-fit: cover` crops the excess.
 
 ### Known Limitations
-1. **Responsive images (3.3):** There is no `srcset`, `sizes` or `<picture>` on any page. I looked at adding them but I couldn't make the smaller file copies needed, so I reverted to plain `<img>` tags to keep the site working. This is worth 5 marks and I'm accepting the loss unless there's time to make the copies.
-2. **Multi-column desktop layout (3.1):** My desktop layout is a single centred column, not multi-column. This affects the layout and media query marks (15 total). The team members section would be the easiest place to add a flex row that stacks below 992px.
-3. **Device-named screenshots (3.4):** My README screenshots are widths only, with no device names like iPhone SE or iPad Mini. This is quick to fix in Chrome DevTools.
+1. The blue link colour on the light background was darkened to improve contrast. It passes AA on white but comes out around 4.4:1 on the `#f4f4f4` background, just under the 4.5:1 threshold. Darkening it further would fix this.
+2. The team section sits side-by-side on desktop and stacks below 992px, but the rest of the desktop layout is still a single centred column. The gallery is a centred flex row rather than a fixed grid, and each page only has one content column. A fuller multi-column layout would match the brief more closely.
+3. Gallery images are the same height across all breakpoints but the width shrinks below 992px, so they become slightly taller than they are wide on tablet and mobile. An `aspect-ratio` rule would keep them square at every breakpoint.
+4. The screenshots in this README are named by width (320px, 700px, 768px, 1400px) rather than by device. I tested at those widths in Chrome DevTools but didn't capture named-device screenshots like iPhone SE or iPad Mini before the deadline.
 
 ## Part 1 Feedback
 
@@ -202,8 +211,10 @@ Part 1 was graded at 100% with no written feedback provided. As a result, no cha
 | 4 Oct 2026 | Added images and some small updates | Images |
 | 4 Oct 2026 | Updated README with Part 2 details and AI links | Documentation |
 | 4 Oct 2026 | Reorganised the CSS into labelled sections and replaced the remaining `<br>` spacers on the About page with CSS | CSS Styling |
-| 5 Oct 2026 | Reverted the `<picture>` and `srcset` markup on the gallery and team photos after deciding not to make the smaller copies; merged the duplicate `.team-member img` rules | CSS Styling / Images |
-| 5 Oct 2026 | Locked the gallery images to a fixed square shape with `object-fit: cover` so the grid lines up evenly; updated README Performance and Challenges sections to match | CSS Styling / Documentation |
+| 5 Oct 2026 | Added `srcset`, `sizes` and a `<picture>` element with smaller image copies; filled in the real pixel widths of every full-size image | Responsive Images |
+| 5 Oct 2026 | Made the team section multi-column on desktop (`display: flex` with `flex: 1 1 18rem`, stacking below 992px) and added shared heading `line-height` and `letter-spacing` rules | CSS Styling |
+| 5 Oct 2026 | Darkened the link colour to improve contrast on the light background | Accessibility |
+| 5 Oct 2026 | Updated README Performance, Known Limitations, Gallery and Accessibility sections to reflect the responsive image and multi-column work | Documentation |
 
 ## References
 
@@ -259,7 +270,7 @@ The Independent Institute of Education (IIE), 2025. Policy on the Integration of
 
 Anthropic. 2026a. Claude (claude-sonnet-4-6). [Large language model]. Available at: [https://claude.ai/share/4b129e95-cd00-4497-86d3-9ca3cd2af4b1] [Accessed: 4 October 2026].
 
-Anthropic. 2026b. Claude (claude-sonnet-5-5). [Large language model]. Part 2 chat. Available at: https://claude.ai/share/2adf8373-a471-4ca3-9f37-c39362904478 [Accessed: 4 October 2026].
+Anthropic. 2026b. Claude (claude-sonnet-5-5). [Large language model]. Part 2 chat. Available at: [PASTE THIS CHAT'S SHARE LINK] [Accessed: 5 October 2026].
 
 Google. 2026a. Gemini. [Large language model]. Prompt: logo image generation for M&P Customs. Available at: https://share.gemini.google/TTzp1iO9BTQO [Accessed: 3 October 2026].
 
@@ -277,7 +288,7 @@ xAI. 2026. Grok. [Large language model]. Prompt: image generation of people for 
 | --- | --- | --- | --- | --- |
 | Logo image (shown in the header on every page) | Google Gemini | Generating the M&P Customs logo image | 3 October 2026 | https://share.gemini.google/TTzp1iO9BTQO and https://share.gemini.google/KhZRsxa9yTtv |
 | Team member images (About page) | xAI Grok | Generating images of the three team members, as the royalty-free images of people I found were not professional enough | 3 October 2026 | https://grok.com/project/c86a9fe4-1160-4165-b951-d566927d2154?tab=conversations |
-| Part 2 README and references | Claude (claude-sonnet-5-5) | Formatting, spelling and grammar in the README, reference formatting, and feedback on my CSS and write-up, all content and code are my own (Anthropic, 2026b) | 3, 4 and 5 October 2026 | https://claude.ai/share/2adf8373-a471-4ca3-9f37-c39362904478 |
+| Part 2 responsive images and README updates | Claude (claude-sonnet-5-5) | Resizing the images, filling in the real pixel widths in the `srcset` attributes, and wording help for the README updates. All content and code are my own (Anthropic, 2026b) | 3, 4 and 5 October 2026 | [PASTE THIS CHAT'S SHARE LINK] |
 
 ## AI Interaction Disclosure
 *(per PDIIE023 — see also annexure in Website Project Proposal document)*
@@ -286,9 +297,9 @@ Google Gemini was used to generate the M&P Customs logo image for Part 2 (Google
 
 xAI Grok was used to generate the images of the team members on the website (xAI, 2026). I found some royalty-free images of people, but they were not professional enough for my liking. Grok has no image-generation limit or a wider limit than most other companies, and the AI-generated images came out perfectly the first time, so I used them instead. The chat is listed in the References section.
 
-Anthropic Claude was used for Part 2 to format the README and its references, fix spelling and grammar, and give feedback on my CSS and write-up (Anthropic, 2026b). All content and code are my own. Claude was also used for Part 1 (Anthropic, 2026a). The chats are listed in the References section.
+Anthropic Claude was used for Part 2 to resize the images, fill in the real pixel widths in the `srcset` attributes, and help word the README updates (Anthropic, 2026b). Claude also formatted the README and its references, fixed spelling and grammar, and gave feedback on my CSS and write-up. All content and code are my own. Claude was also used for Part 1 (Anthropic, 2026a). The chats are listed in the References section.
 
-**Workflow note:** I did most of the Part 2 work on 3 October 2026, sitting the whole day and taking minimum breaks. My workflow is to sit down and work until I can't use AI for assistance, so that by the time I am almost done I have a spare day. It works well for me. I did not use AI for Part 2 before 3 October 2026; the earlier Part 2 work (21 and 25 September) was done without AI. I only used AI for Part 1 and on 3 October 2026.
+**Workflow note:** I did most of the Part 2 work on 3 October 2026, sitting the whole day and taking minimum breaks. My workflow is to sit down and work until I can't use AI for assistance, so that by the time I am almost done I have a spare day. It works well for me. I did not use AI for Part 2 before 3 October 2026; the earlier Part 2 work (21 and 25 September) was done without AI. I only used AI for Part 1, and on 3, 4 and 5 October 2026.
 
 ---
 
