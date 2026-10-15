@@ -8,6 +8,7 @@
     <meta name="keywords" content="3D-printing,welding,CNC">
     <meta name="description" content="Enquire about M&P Customs">
     <link rel="stylesheet" href="styles/styles.css">
+        <script src="js/java.js"></script>
 </head>
 <body>
     <!-- main header and navbar -->
@@ -24,6 +25,17 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <!-- Search box: typing hides the pages that do not match (see searchPages in js/java.js) -->
+        <div class="site-search">
+            <input type="text" id="searchInput" onkeyup="searchPages()" placeholder="Search the site..." aria-label="Search the site">
+            <ul id="searchList">
+                <li><a href="index.html">Home - 3D printing, CNC machining, metal fabrication</a></li>
+                <li><a href="about.html">About - our mission, vision and team</a></li>
+                <li><a href="services.html">Services - gallery, 3D printing, CAD, welding, CNC</a></li>
+                <li><a href="enquiry.html">Enquiry - get a free quote</a></li>
+                <li><a href="contact.html">Contact - email, phone, WhatsApp, Instagram, map</a></li>
+            </ul>
+        </div>
     </header>
 
     <div class="container">
@@ -33,7 +45,7 @@
             </h2>
             <!-- enquiry form so clients can ask for a quote and pick what they need -->
             <div class="form-container">
-                <form>
+                <form id="enquiry-form">
                     <fieldset>
                         <legend> Enquiries </legend>
                         <div>

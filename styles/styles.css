@@ -115,6 +115,60 @@ nav a:active {
 }
 
 /* ==========================================================================
+   Site Search (below the nav)
+   ========================================================================== */
+.site-search {
+    position: relative;
+    max-width: 25rem;
+    margin: 0 auto 0.625rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 0.125rem solid #000;
+    border-radius: 0.5rem;
+    font: inherit;
+}
+
+#searchInput:focus {
+    outline: #2F99C6 solid 0.125rem;
+    border-color: #2F99C6;
+}
+
+/* List of pages, hidden until the user types (see searchPages in js/java.js) */
+#searchList {
+    display: none;
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    z-index: 10;
+    max-width: none;
+    margin: 0.25rem 0 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+#searchList li a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-top: -1px; /* Stops borders doubling up between links */
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+}
+
+#searchList li a:hover,
+#searchList li a:focus {
+    background-color: #eee;
+    color: #2F99C6;
+}
+
+/* ==========================================================================
    Headings & Paragraphs
    ========================================================================== */
 h2 {
@@ -229,6 +283,7 @@ footer a:hover {
 .gallery img {
     width: 100%;
     max-width: 18.75rem;
+    height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 0.9375rem;

@@ -232,6 +232,10 @@ Part 1 was graded at 100% with no written feedback provided. As a result, no cha
 | 5 Oct 2026 | Darkened the link colour to improve contrast on the light background | Accessibility |
 | 5 Oct 2026 | Added a 768px breakpoint (small tablet) with a smaller body font, gallery images, form container and team cards | Responsive Design |
 | 5 Oct 2026 | Updated README Performance, Known Limitations, Gallery and Accessibility sections to reflect the responsive image and multi-column work | Documentation |
+| 15 Oct 2026 | Added a lightbox to the gallery on the Services page using the Lightbox3 library (stylesheet and script loaded from the jsDelivr CDN; each gallery link has `data-lightbox="gallery"`) so images open in a larger view | Interactive Elements / Gallery Lightbox |
+| 15 Oct 2026 | Created `js/java.js` (replacing the `.gitkeep` placeholder) and linked it on the Contact and Home pages | JavaScript |
+| 15 Oct 2026 | Contact form now submits with JavaScript: the script stops the page reloading, sends the form data to Web3Forms with `fetch`, and shows a sending, success or error message to the user | Form Functionality / Contact |
+| 16 Oct 2026 | Added a site search box under the navigation on every page (`searchPages()` in `js/java.js`) that hides the page links that don't match what the user types, with matching styles in `styles/styles.css` | Dynamic Content and Search |
 
 ## References
 
@@ -277,6 +281,12 @@ MDN Web Docs, n.d. rel="preconnect". [Online]. Available at: https://developer.m
 
 Google Fonts, n.d. Montserrat. [Font]. Available at: https://fonts.google.com/specimen/Montserrat [Accessed: 4 October 2026] — used for the site's typography (Montserrat Regular and Bold).
 
+Dhakar, L., n.d. Lightbox3. [Online]. Available at: https://lokeshdhakar.com/projects/lightbox3/ [Accessed: 15 October 2026] — used for the image lightbox on the Services page gallery.
+
+Web3Forms, n.d. Web3Forms. [Online tool]. Available at: https://web3forms.com/ [Accessed: 15 October 2026] — used to send the Contact page form data to my email address.
+
+W3Schools, n.d. How To - Filter/Search List. [Online resource]. Available at: https://www.w3schools.com/howto/howto_js_filter_lists.asp [Accessed: 16 October 2026] — used as the reference for the site search box that filters the list of pages as the user types.
+
 ### Referencing & Institutional Sources
 
 The Independent Institute of Education (IIE), 2026. Harvard-Anglia style reference guide — adapted for The IIE. [pdf] The Independent Institute of Education. Available at: [IIE internal resource] [Accessed: 4 October 2026].
@@ -295,6 +305,8 @@ Google. 2026b. Gemini. [Large language model]. Prompt: logo image generation for
 
 xAI. 2026. Grok. [Large language model]. Prompt: image generation of people for the M&P Customs website. Available at: https://grok.com/project/c86a9fe4-1160-4165-b951-d566927d2154?tab=conversations [Accessed: 3 October 2026].
 
+Google. 2026c. AI Mode (Google Search). [Large language model]. Prompt: "simple javascript to make my email from work on my website using mailto with a form". Available at: https://www.google.com/search?q=simple+javascript+to+make+my+email+from+work+on+my+website+using+mailto+with+a+form&client=opera-gx&hs=nJX&sca_esv=3c71a091e253e848&biw=1491&bih=710&sxsrf=APpeQnuChtHHNO0pYegeTlY24qpdN0cWAA:1792096527480&udm=50&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8cqu7ocb7U6ah0xpkIrGMK4LpKPoHZrc4HVz9uOAATjT1g2XbMUNYTWk-OmYpiK--qL0zHOgSF_fPhBz4Y3qmJwwykkgDu4pIUF48xQNejTwIs1CGyfdr_4HCKY_BXhTJ9t8osIn_kuWApfjcTfOs7h73ocH496Prdxp7WYjlBKpt9QdTZmGXZi4Eyu8IGLKLnfK6fDA&vsint=&aep=1&ntc=1&cs=1&sa=X&ved=2ahUKEwiVrrHn77yXAxVnQkEAHV0xJxEQ2J8OegQIExAD [Accessed: 15 October 2026].
+
 ⚠️ **Disclaimer:** All references above must be verified by the student before submission. Claude may make errors in referencing. It is the student's responsibility to ensure all references are accurate and comply with the IIE Harvard-Anglia Style Guide (2026).
 
 ## Disclosure of AI Usage in my Assessment
@@ -307,6 +319,12 @@ xAI. 2026. Grok. [Large language model]. Prompt: image generation of people for 
 | Team member images (About page) | xAI Grok | Generating images of the three team members, as the royalty-free images of people I found were not professional enough | 3 October 2026 | https://grok.com/project/c86a9fe4-1160-4165-b951-d566927d2154?tab=conversations |
 | Part 2 responsive images and README updates | Claude (claude-sonnet-5-5) | Resizing the images, filling in the real pixel widths in the `srcset` attributes, and wording help for the README updates. All content and code are my own (Anthropic, 2026b) | 3, 4 and 5 October 2026 | [https://claude.ai/share/2adf8373-a471-4ca3-9f37-c39362904478 |] |
 
+**Part 3 – Enhancing Functionality and SEO (M&P Customs website)**
+
+| Section within the assessment | AI tool used | Purpose | Date | Link to chat |
+| --- | --- | --- | --- | --- |
+| Contact page (mailto email feature) | Google AI Mode | Searching for a simple example of using JavaScript with a form and a `mailto:` link, to understand how the form values are put into an email (Google, 2026c) | 15 October 2026 | https://www.google.com/search?q=simple+javascript+to+make+my+email+from+work+on+my+website+using+mailto+with+a+form&client=opera-gx&hs=nJX&sca_esv=3c71a091e253e848&biw=1491&bih=710&sxsrf=APpeQnuChtHHNO0pYegeTlY24qpdN0cWAA:1792096527480&udm=50&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8cqu7ocb7U6ah0xpkIrGMK4LpKPoHZrc4HVz9uOAATjT1g2XbMUNYTWk-OmYpiK--qL0zHOgSF_fPhBz4Y3qmJwwykkgDu4pIUF48xQNejTwIs1CGyfdr_4HCKY_BXhTJ9t8osIn_kuWApfjcTfOs7h73ocH496Prdxp7WYjlBKpt9QdTZmGXZi4Eyu8IGLKLnfK6fDA&vsint=&aep=1&ntc=1&cs=1&sa=X&ved=2ahUKEwiVrrHn77yXAxVnQkEAHV0xJxEQ2J8OegQIExAD |
+
 ## AI Interaction Disclosure
 *(per PDIIE023 — see also annexure in Website Project Proposal document)*
 
@@ -315,6 +333,8 @@ Google Gemini was used to generate the M&P Customs logo image for Part 2 (Google
 xAI Grok was used to generate the images of the team members on the website (xAI, 2026). I found some royalty-free images of people, but they were not professional enough for my liking. Grok has no image-generation limit or a wider limit than most other companies, and the AI-generated images came out perfectly the first time, so I used them instead. The chat is listed in the References section.
 
 Anthropic Claude was used for Part 2 to resize the images, fill in the real pixel widths in the `srcset` attributes, and help word the README updates (Anthropic, 2026b). Claude also formatted the README and its references, fixed spelling and grammar, and gave feedback on my CSS and write-up. All content and code are my own. Claude was also used for Part 1 (Anthropic, 2026a). The chats are listed in the References section.
+
+Google AI Mode was used for Part 3 to look up an example of how JavaScript and a `mailto:` link can work together with a form for the Contact page email feature (Google, 2026c). The chat is listed in the References section.
 
 **Workflow note:** I did most of the Part 2 work on 3 October 2026, sitting the whole day and taking minimum breaks. My workflow is to sit down and work until I can't use AI for assistance, so that by the time I am almost done I have a spare day. It works well for me. I did not use AI for Part 2 before 3 October 2026; the earlier Part 2 work (21 and 25 September) was done without AI. I only used AI for Part 1, and on 3, 4 and 5 October 2026.
 

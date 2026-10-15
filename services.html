@@ -8,6 +8,9 @@
     <meta name="keywords" content="3D-printing,welding,CNC">
     <meta name="description" content="Services offered by M&P Customs">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox3@1/dist/lightbox3.css">
+    <script src="https://cdn.jsdelivr.net/npm/lightbox3@1/dist/lightbox3.min.js" defer></script>
+    <script src="js/java.js" defer></script>
 </head>
 <body>
     <!-- Top header and site navigation -->
@@ -24,6 +27,17 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <!-- Search box: typing hides the pages that do not match (see searchPages in js/java.js) -->
+        <div class="site-search">
+            <input type="text" id="searchInput" onkeyup="searchPages()" placeholder="Search the site..." aria-label="Search the site">
+            <ul id="searchList">
+                <li><a href="index.html">Home - 3D printing, CNC machining, metal fabrication</a></li>
+                <li><a href="about.html">About - our mission, vision and team</a></li>
+                <li><a href="services.html">Services - gallery, 3D printing, CAD, welding, CNC</a></li>
+                <li><a href="enquiry.html">Enquiry - get a free quote</a></li>
+                <li><a href="contact.html">Contact - email, phone, WhatsApp, Instagram, map</a></li>
+            </ul>
+        </div>
     </header>
     <div class="container">
         <main>
@@ -33,80 +47,89 @@
                     Our Gallery
                 </h2>
                 <div class="gallery">
-                    <picture>
-                        <source media="(max-width: 600px)" srcset="images/3D-Printing-1-small.jpg">
+                    <a href="images/3D-Printing-1.jpg" data-lightbox="gallery">
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="images/3D-Printing-1-small.jpg">
+                            <img
+                                src="images/3D-Printing-1.jpg"
+                                srcset="images/3D-Printing-1-small.jpg 400w,
+                                        images/3D-Printing-1.jpg 3148w"
+                                sizes="(max-width: 600px) 90vw, (max-width: 992px) 14rem, 18.75rem"
+                                alt="3D printing bed"
+                                width="500"
+                                height="500">
+                        </picture>
+                    </a>
+                    <a href="images/cad.jpg" data-lightbox="gallery">
                         <img
-                            src="images/3D-Printing-1.jpg"
-                            srcset="images/3D-Printing-1-small.jpg 400w,
-                                    images/3D-Printing-1.jpg 3148w"
+                            src="images/cad.jpg"
+                            srcset="images/cad-small.jpg 400w,
+                                    images/cad.jpg 7952w"
                             sizes="(max-width: 600px) 90vw, (max-width: 992px) 14rem, 18.75rem"
-                            alt="3D printing bed"
+                            alt="CAD Model"
                             width="500"
                             height="500">
-                    </picture>
-
-                    <img
-                        src="images/cad.jpg"
-                        srcset="images/cad-small.jpg 400w,
-                                images/cad.jpg 7952w"
-                        sizes="(max-width: 600px) 90vw, (max-width: 992px) 14rem, 18.75rem"
-                        alt="CAD Model"
-                        width="500"
-                        height="500">
-
-                    <img
-                        src="images/3D-Printing-2.jpg"
-                        srcset="images/3D-Printing-2-small.jpg 400w,
-                                images/3D-Printing-2.jpg 2000w"
-                        sizes="(max-width: 600px) 90vw, (max-width: 992px) 14rem, 18.75rem"
-                        alt="3D printing Skull"
-                        width="500"
-                        height="500">
-
-                    <img
-                        src="images/CAD2.jpg"
-                        srcset="images/CAD2-small.jpg 400w,
-                                images/CAD2.jpg 9940w"
-                        sizes="(max-width: 600px) 90vw, (max-width: 992px) 14rem, 18.75rem"
-                        alt="CAD Lion"
-                        width="500"
-                        height="500">
-
-                    <img
-                        src="images/CNC1.jpg"
-                        srcset="images/CNC1-small.jpg 400w,
-                                images/CNC1.jpg 3024w"
-                        sizes="(max-width: 600px) 90vw, (max-width: 992px) 14rem, 18.75rem"
-                        alt="CNC milling machine"
-                        width="500"
-                        height="500">
-
-                    <img
-                        src="images/welding.jpg"
-                        srcset="images/welding-small.jpg 400w,
-                                images/welding.jpg 3072w"
-                        sizes="(max-width: 600px) 90vw, (max-width: 992px) 14rem, 18.75rem"
-                        alt="Welding"
-                        width="500"
-                        height="500">
-
-                    <img
-                        src="images/CNC2.jpg"
-                        srcset="images/CNC2-small.jpg 400w,
-                                images/CNC2.jpg 5944w"
-                        sizes="(max-width: 600px) 90vw, (max-width: 992px) 14rem, 18.75rem"
-                        alt="Coolant spraying during CNC milling"
-                        width="500"
-                        height="500">
-
-                    <img
-                        src="images/welding2.jpg"
-                        srcset="images/welding2-small.jpg 400w,
-                                images/welding2.jpg 2252w"
-                        sizes="(max-width: 600px) 90vw, (max-width: 992px) 14rem, 18.75rem"
-                        alt="Welding sparks"
-                        width="500"
-                        height="500">
+                    </a>
+                    <a href="images/3D-Printing-2.jpg" data-lightbox="gallery">
+                        <img
+                            src="images/3D-Printing-2.jpg"
+                            srcset="images/3D-Printing-2-small.jpg 400w,
+                                    images/3D-Printing-2.jpg 2000w"
+                            sizes="(max-width: 600px) 90vw, (max-width: 992px) 14rem, 18.75rem"
+                            alt="3D printing Skull"
+                            width="500"
+                            height="500">
+                    </a>
+                    <a href="images/CAD2.jpg" data-lightbox="gallery">
+                        <img
+                            src="images/CAD2.jpg"
+                            srcset="images/CAD2-small.jpg 400w,
+                                    images/CAD2.jpg 9940w"
+                            sizes="(max-width: 600px) 90vw, (max-width: 992px) 14rem, 18.75rem"
+                            alt="CAD Lion"
+                            width="500"
+                            height="500">
+                    </a>
+                    <a href="images/CNC1.jpg" data-lightbox="gallery">
+                        <img
+                            src="images/CNC1.jpg"
+                            srcset="images/CNC1-small.jpg 400w,
+                                    images/CNC1.jpg 3024w"
+                            sizes="(max-width: 600px) 90vw, (max-width: 992px) 14rem, 18.75rem"
+                            alt="CNC milling machine"
+                            width="500"
+                            height="500">
+                    </a>
+                    <a href="images/welding.jpg" data-lightbox="gallery">
+                        <img
+                            src="images/welding.jpg"
+                            srcset="images/welding-small.jpg 400w,
+                                    images/welding.jpg 3072w"
+                            sizes="(max-width: 600px) 90vw, (max-width: 992px) 14rem, 18.75rem"
+                            alt="Welding"
+                            width="500"
+                            height="500">
+                    </a>
+                    <a href="images/CNC2.jpg" data-lightbox="gallery">
+                        <img
+                            src="images/CNC2.jpg"
+                            srcset="images/CNC2-small.jpg 400w,
+                                    images/CNC2.jpg 5944w"
+                            sizes="(max-width: 600px) 90vw, (max-width: 992px) 14rem, 18.75rem"
+                            alt="Coolant spraying during CNC milling"
+                            width="500"
+                            height="500">
+                    </a>
+                    <a href="images/welding2.jpg" data-lightbox="gallery">
+                        <img
+                            src="images/welding2.jpg"
+                            srcset="images/welding2-small.jpg 400w,
+                                    images/welding2.jpg 2252w"
+                            sizes="(max-width: 600px) 90vw, (max-width: 992px) 14rem, 18.75rem"
+                            alt="Welding sparks"
+                            width="500"
+                            height="500">
+                    </a>
                 </div>
             </section>
 
