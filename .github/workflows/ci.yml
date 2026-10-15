@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  website:
+    name: HTML and links
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+
+      # Known issues on contact.html: the map <iframe> has no title and
+      # uses width="100%". Both rules are set to "warn" for now; change
+      # them back to "error" once the page is fixed.
+      - name: Validate HTML
+        run: |
+          cat > "$RUNNER_TEMP/htmlvalidate.json" <<'JSON'
+          {
+            "extends": ["html-validate:standard"],
+            "rules": {
+              "element-required-attributes": "warn",
+              "attribute-allowed-values": "warn"
+            }
+          }
+          JSON
+          npx --yes html-validate@11 --config "$RUNNER_TEMP/htmlvalidate.json" "*.html"
+
+      # Checks links between pages, images, fonts and CSS (offline = no
+      # external sites, so the check never fails because a site is down)
+      - name: Check internal links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --offline
+            --no-progress
+            --root-dir "${{ github.workspace }}"
+            "./*.html"
+            "./README.md"
