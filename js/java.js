@@ -73,3 +73,25 @@ function searchPages() {
     }
   }
 }
+
+// Search box above the services table: hides every row that doesn't contain what was typed
+function searchTable() {
+  var input = document.getElementById('tableInput');
+  var filter = input.value.toUpperCase();
+  var table = document.getElementById('serviceTable');
+  var tr = table.getElementsByTagName('tr');
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (var i = 0; i < tr.length; i++) {
+    var td = tr[i].getElementsByTagName('td')[0];
+    if (td) { // The header row has no <td>, so it is skipped and always stays visible
+      // Search the whole row (service, materials and description), not just the first column
+      var txtValue = tr[i].textContent || tr[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = '';
+      } else {
+        tr[i].style.display = 'none';
+      }
+    }
+  }
+}

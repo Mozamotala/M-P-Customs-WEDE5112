@@ -169,6 +169,55 @@ nav a:active {
 }
 
 /* ==========================================================================
+   Services Page - Searchable Services Table
+   ========================================================================== */
+#tableInput {
+    display: block;
+    width: 100%;
+    max-width: 43.75rem;
+    margin: 0.625rem auto;
+    padding: 0.5rem 0.75rem;
+    border: 0.125rem solid #000;
+    border-radius: 0.5rem;
+    font: inherit;
+    font-size: 1rem;
+}
+
+#tableInput:focus {
+    outline: #2F99C6 solid 0.125rem;
+    border-color: #2F99C6;
+}
+
+#serviceTable {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 43.75rem;
+    margin: 0 auto 1.25rem;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+#serviceTable th,
+#serviceTable td {
+    text-align: left;
+    padding: 0.75rem;
+}
+
+#serviceTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#serviceTable tr.header {
+    background-color: #000;
+    color: #fff;
+}
+
+#serviceTable tr:not(.header):hover {
+    background-color: #f1f1f1;
+}
+
+/* ==========================================================================
    Headings & Paragraphs
    ========================================================================== */
 h2 {
