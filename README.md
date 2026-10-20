@@ -236,6 +236,7 @@ Part 1 was graded at 100% with no written feedback provided. As a result, no cha
 | 15 Oct 2026 | Created `js/java.js` (replacing the `.gitkeep` placeholder) and linked it on the Contact and Home pages | JavaScript |
 | 15 Oct 2026 | Contact form now submits with JavaScript: the script stops the page reloading, sends the form data to Web3Forms with `fetch`, and shows a sending, success or error message to the user | Form Functionality / Contact |
 | 16 Oct 2026 | Added a site search box under the navigation on every page (`searchPages()` in `js/java.js`) that hides the page links that don't match what the user types, with matching styles in `styles/styles.css` | Dynamic Content and Search |
+| 18 Oct 2026 | Added a searchable table of services to the Services page (`searchTable()` in `js/java.js` plus table styles in `styles/styles.css`) that hides the rows that don't match what the user types | Dynamic Content and Search |
 
 ## References
 
@@ -286,6 +287,14 @@ Dhakar, L., n.d. Lightbox3. [Online]. Available at: https://lokeshdhakar.com/pro
 Web3Forms, n.d. Web3Forms. [Online tool]. Available at: https://web3forms.com/ [Accessed: 15 October 2026] — used to send the Contact page form data to my email address.
 
 W3Schools, n.d. How To - Filter/Search List. [Online resource]. Available at: https://www.w3schools.com/howto/howto_js_filter_lists.asp [Accessed: 16 October 2026] — used as the reference for the site search box that filters the list of pages as the user types.
+
+W3Schools, n.d. How To - Filter/Search Table. [Online resource]. Available at: https://www.w3schools.com/howto/howto_js_filter_table.asp [Accessed: 20 October 2026] — used as the reference for the searchable services table on the Services page.
+
+W3Schools, n.d. How To - Filter Elements. [Online resource]. Available at: https://www.w3schools.com/howto/howto_js_filter_elements.asp [Accessed: 20 October 2026] — consulted while researching how to filter page content with JavaScript.
+
+W3Schools, n.d. How To - Filter Dropdown. [Online resource]. Available at: https://www.w3schools.com/howto/howto_js_filter_dropdown.asp [Accessed: 20 October 2026] — consulted while researching how to filter page content with JavaScript.
+
+W3Schools, n.d. How To - Sort a List. [Online resource]. Available at: https://www.w3schools.com/howto/howto_js_sort_list.asp [Accessed: 20 October 2026] — consulted while researching how to sort content with JavaScript.
 
 ### Referencing & Institutional Sources
 
