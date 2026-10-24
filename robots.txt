@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://github.com/Mozamotala/M-P-Customs-WEDE5112/sitemap.xml

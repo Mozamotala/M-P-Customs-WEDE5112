@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enquiries M&P Customs</title>
     <meta name="author" content="Mohamed Zaeem Motala">
-    <meta name="keywords" content="3D-printing,welding,CNC">
+    <meta name="keywords" content="quote, enquiry, cost estimate, 3D printing price, CNC price, welding price">
     <meta name="description" content="Enquire about M&P Customs">
     <link rel="stylesheet" href="styles/styles.css">
         <script src="js/java.js"></script>
@@ -45,7 +45,9 @@
             </h2>
             <!-- enquiry form so clients can ask for a quote and pick what they need -->
             <div class="form-container">
-                <form id="enquiry-form">
+                <form id="enquiry-form" novalidate>
+                    <input type="hidden" name="access_key" value="e4bf7990-aa17-4d27-b647-02a7cbacc6bf">
+                    <input type="hidden" name="subject" value="New quote enquiry from the website">
                     <fieldset>
                         <legend> Enquiries </legend>
                         <div>
@@ -67,7 +69,7 @@
                         <!-- dropdown list to choose the service -->
                         <div>
                             <label for="services">Services needed</label>
-                            <select id="services" name="services">
+                            <select id="services" name="Service Needed">
                                 <option value="Deselected">Select service</option>
                                 <option value="3D Printing">3D Printing</option>
                                 <option value="CNC">CNC</option>
@@ -76,10 +78,14 @@
                         </div>
                         <div>
                             <label for="feedback">Project Description:</label>
-                            <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea>
+                            <textarea id="feedback" name="Project Description" rows="4" cols="50" required></textarea>
                             <input type="submit" value="Submit">
                         </div>
                     </fieldset>
+                    <!-- Estimated cost and availability, filled in by js/java.js -->
+                    <div id="quote-result"></div>
+                    <!-- Sending / success / error message, filled in by js/java.js -->
+                    <div id="form-status"></div>
                 </form>
             </div>
         </main>

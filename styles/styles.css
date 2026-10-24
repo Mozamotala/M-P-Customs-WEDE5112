@@ -218,6 +218,49 @@ nav a:active {
 }
 
 /* ==========================================================================
+   Services Page - FAQ Accordion
+   ========================================================================== */
+#faq {
+    max-width: 43.75rem;
+    margin: 0 auto 1.25rem;
+}
+
+.accordion {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background-color: #000;
+    color: #fff;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.accordion:hover,
+.accordion.active {
+    background-color: #2F99C6;
+}
+
+/* Hidden until opened; max-height is set by loadFaq() in js/java.js */
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 0.75rem;
+    background-color: #fff;
+    transition: max-height 0.3s ease-out;
+}
+
+/* ==========================================================================
+   Enquiry Page - Quote Result
+   ========================================================================== */
+#quote-result {
+    margin-top: 0.625rem;
+    font-weight: bold;
+}
+
+/* ==========================================================================
    Headings & Paragraphs
    ========================================================================== */
 h2 {
